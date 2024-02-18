@@ -1,0 +1,456 @@
+roads : 
+  - id : 1
+    v_ids : [1, 49, 10000]
+    v_mid : 1
+    v_sc : 1
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+    input : 700
+
+  - id : 2
+    v_ids : [2, 50, 10001]
+    v_mid : 2
+    v_sc : 4
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+
+  - id : 3
+    v_ids : [3, 51, 10002]
+    v_mid : 3
+    v_sc : 7
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+
+  - id : 4
+    v_ids : [4]
+    v_mid : 4
+
+  - id : 5
+    v_ids : [5, 52, 10003]
+    v_mid : 5
+    v_sc : 2
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+    input : 700
+
+  - id : 6
+    v_ids : [6, 53, 10004]
+    v_mid : 6
+    v_sc : 5
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+
+  - id : 7
+    v_ids : [7, 54, 10005]
+    v_mid : 7
+    v_sc : 8
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+
+  - id : 8
+    v_ids : [8]
+    v_mid : 8
+
+  - id : 9
+    v_ids : [9, 55, 10006]
+    v_mid : 9
+    v_sc : 3
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+    input : 700
+
+  - id : 10
+    v_ids : [10, 56, 10007]
+    v_mid : 10
+    v_sc : 6
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+
+  - id : 11
+    v_ids : [11, 57, 10008]
+    v_mid : 11
+    v_sc : 9
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+
+      - id : 8
+        dirct : 'right'
+
+  - id : 12
+    v_ids : [12]
+    v_mid : 12
+
+  - id : 13
+    v_ids : [13]
+    v_mid : 13
+
+  - id : 14
+    v_ids : [14, 58, 10009]
+    v_mid : 14
+    v_sc : 1
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+
+  - id : 15
+    v_ids : [15, 59, 10010]
+    v_mid : 15
+    v_sc : 4
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+
+  - id : 16
+    v_ids : [16, 60, 10011]
+    v_mid : 16
+    v_sc : 7
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+    input : 700
+
+  - id : 17
+    v_ids : [17]
+    v_mid : 17
+
+  - id : 18
+    v_ids : [18, 61, 10012]
+    v_mid : 18
+    v_sc : 2
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+
+  - id : 19
+    v_ids : [19, 62, 10013]
+    v_mid : 19  
+    v_sc : 5
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+
+  - id : 20
+    v_ids : [20, 63, 10014]
+    v_mid : 20
+    v_sc : 8
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+    input : 700
+
+  - id : 21
+    v_ids : [21]
+    v_mid : 21
+
+  - id : 22
+    v_ids : [22, 64, 10015]
+    v_mid : 22
+    v_sc : 3
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+
+  - id : 23
+    v_ids : [23, 65, 10016]
+    v_mid : 23
+    v_sc : 6
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+
+  - id : 24
+    v_ids : [24, 66, 10017]
+    v_mid : 24
+    v_sc : 9
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+
+      - id : 6
+        dirct : 'right'
+    input : 700
+
+  - id : 25
+    v_ids : [25, 67, 10018]
+    v_mid : 25
+    v_sc : 1
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+    input : 700
+
+  - id : 26
+    v_ids : [26, 68, 10019]
+    v_mid : 26
+    v_sc : 2
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+
+  - id : 27
+    v_ids : [27, 69, 10020]
+    v_mid : 27
+    v_sc : 3
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+
+  - id : 28
+    v_ids : [28]
+    v_mid : 28
+
+  - id : 29
+    v_ids : [29, 70, 10021]
+    v_mid : 29
+    v_sc : 4
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+    input : 700
+
+  - id : 30
+    v_ids : [30, 71, 10022]
+    v_mid : 30
+    v_sc : 5
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+
+  - id : 31 
+    v_ids : [31, 72, 10023]
+    v_mid : 31
+    v_sc : 6
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+
+  - id : 32
+    v_ids : [32]
+    v_mid : 32
+
+  - id : 33
+    v_ids : [33, 73, 10024]
+    v_mid : 33
+    v_sc : 7
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+    input : 700
+
+  - id : 34
+    v_ids : [34, 74, 10025]
+    v_mid : 34
+    v_sc : 8
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+
+  - id : 35
+    v_ids : [35, 75, 10026]
+    v_mid : 35
+    v_sc : 9
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+
+      - id : 2
+        dirct : 'right'
+
+  - id : 36
+    v_ids : [36]
+    v_mid : 36
+
+  - id : 37
+    v_ids : [37]
+    v_mid : 37
+
+  - id : 38
+    v_ids : [38, 76, 10027]
+    v_mid : 38
+    v_sc : 1
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+
+  - id : 39
+    v_ids : [39, 77, 10028]
+    v_mid : 39
+    v_sc : 2
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+
+  - id : 40
+    v_ids : [40, 78, 10029]
+    v_mid : 40
+    v_sc : 3
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+    input : 700
+
+  - id : 41
+    v_ids : [41]
+    v_mid : 41
+
+  - id : 42
+    v_ids : [42, 79, 10030]
+    v_mid : 42
+    v_sc : 4
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+
+  - id : 43
+    v_ids : [43, 80, 10031]
+    v_mid : 43
+    v_sc : 5
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+
+  - id : 44
+    v_ids : [44, 81, 10032]
+    v_mid : 44
+    v_sc : 6
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+    input : 700
+
+  - id : 45
+    v_ids : [45]
+    v_mid : 45
+
+  - id : 46
+    v_ids : [46, 82, 10033]
+    v_mid : 46
+    v_sc : 7
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+
+  - id : 47
+    v_ids : [47, 83, 10034]
+    v_mid : 47
+    v_sc : 8
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+
+  - id : 48
+    v_ids : [48, 84, 10035]
+    v_mid : 48
+    v_sc : 9
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+
+      - id : 4
+        dirct : 'right'
+    input : 700
