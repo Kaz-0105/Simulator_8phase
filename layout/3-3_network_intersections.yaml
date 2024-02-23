@@ -1,0 +1,41 @@
+id : 1
+intersections :
+  - id : 1
+    irids : [1, 14, 25, 38]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [2, 13, 26, 37]
+    phs : 
+      id : 1
+      road_ids : []
+  - id : 2
+    irids : [5, 18, 26, 39]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [6, 17, 27, 38]
+  - id : 3
+    irids : [9, 22, 27, 40]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [10, 21, 28, 39]
+  - id : 4
+    irids : [2, 15, 29, 42]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [3, 12, 30, 41]
+  - id : 5
+    irids : [6, 19, 30, 43]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [7, 18, 31, 42]
+  - id : 6
+    irids : [10, 23, 31, 44]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [11, 22, 32, 43]
+  - id : 7
+    irids : [3, 16, 33, 46]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [4, 15, 34, 45]
+  - id : 8
+    irids : [7, 20, 34, 47]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [8, 19, 35, 46]
+  - id : 9
+    irids : [11, 24, 35, 48]
+    ir_directions : ["west", "east", "north", "south"]
+    orids : [12, 23, 36, 47]
