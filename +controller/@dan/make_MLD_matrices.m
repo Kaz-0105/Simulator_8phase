@@ -61,5 +61,20 @@ function make_MLD_matrices(obj)
     obj.make_D1_matrix(route_vehs.west, first_veh_ids.west, "west");
 
     % D2の計算
-    obj.make_D2_matrix(pos_vehs.north, first_veh_ids.north, road_prms.north);
+    obj.make_D2_matrix(pos_vehs.north, first_veh_ids.north);
+    obj.make_D2_matrix(pos_vehs.south, first_veh_ids.south);
+    obj.make_D2_matrix(pos_vehs.east, first_veh_ids.east);
+    obj.make_D2_matrix(pos_vehs.west, first_veh_ids.west);
+
+    % D3の計算
+    obj.make_D3_matrix(pos_vehs.north, first_veh_ids.north, road_prms.north);
+    obj.make_D3_matrix(pos_vehs.south, first_veh_ids.south, road_prms.south);
+    obj.make_D3_matrix(pos_vehs.east, first_veh_ids.east, road_prms.east);
+    obj.make_D3_matrix(pos_vehs.west, first_veh_ids.west, road_prms.west);
+
+    % Eの計算
+    obj.make_E_matrix(pos_vehs.north, first_veh_ids.north, road_prms.north);
+    obj.make_E_matrix(pos_vehs.south, first_veh_ids.south, road_prms.south);
+    obj.make_E_matrix(pos_vehs.east, first_veh_ids.east, road_prms.east);
+    obj.make_E_matrix(pos_vehs.west, first_veh_ids.west, road_prms.west);
 end

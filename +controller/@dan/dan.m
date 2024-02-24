@@ -20,7 +20,10 @@ classdef dan < handle
         first_veh_ids; % 先頭車の情報をまとめた構造体
 
         MLD_matrices; % 混合論理動的システムの係数行列を収納する構造体
+        MILP_matrices; % 混合整数線形計画問題の係数行列を収納する構造体
 
+        v_num; % MLDの決定変数の長さ
+        prediction_count; % 予測回数
 
 
     end
@@ -42,6 +45,8 @@ classdef dan < handle
             obj.phi_results = tool.phi_results(obj.N_p, obj.N_c, obj.N_s); % phi_resultsクラスの初期化
             obj.u_results = tool.u_results(obj.signal_num, obj.N_p, obj.N_c); % u_resultsクラスの初期化
             obj.u_results.set_initial_future_data([1,0,1,0,0,0,0,0]'); % モデルに出てくる前回の信号現示の部分でエラーを起こさないために設定
+
+            obj.prediction_count = 0; % 予測回数の初期化
         end
 
 
@@ -50,6 +55,7 @@ classdef dan < handle
 
             obj.make_vehs_data(intersection_struct_map, vis_data); % 自動車の位置情報と進行方向の情報を更新
             obj.make_MLD_matrices(); % 混合論理動的システムの係数行列を更新
+            obj.make_MILP_matrices(); % 混合整数線形計画問題の係数行列を更新
 
         end
     end
@@ -57,6 +63,8 @@ classdef dan < handle
     methods(Access = private)
         make_road_prms(obj, maps);
         make_vehs_data(obj, intersection_struct_map, vis_data);
+
+        % 混合論理動的システムの係数行列を作成する関数群
         make_MLD_matrices(obj);
         make_A_matrix(obj, pos_vehs);
         make_B1_matrix(obj, pos_vehs, route_vehs, first_veh_ids, road_prms);
@@ -65,7 +73,24 @@ classdef dan < handle
         make_C_matrix(obj, pos_vehs, route_vehs, first_veh_ids, road_prms);    
         make_D1_matrix(obj, route_vehs, first_veh_ids, direction);
         make_D2_matrix(obj, pos_vehs, first_veh_ids, road_prms);
-        
+        make_D3_matrix(obj, pos_vehs, first_veh_ids, road_prms);
+        make_E_matrix(obj, pos_vehs, first_veh_ids, road_prms);
+
+        % 決定変数内のdelta_1とdelta_cの位置を探索する関数群
+        make_delta1_list(obj);
+        make_deltac_list(obj);
+
+        % 混合整数線形計画問題の形にMLDの係数と信号機制約の係数を変形する関数群
+        make_MILP_matrices(obj);
+        make_f_matrix(obj);
+        make_constraints_matrix(obj, MLD_matrices, pos_vehs);
+        make_lb_ub_matrix(obj);
+        make_intcon_matrix(obj);
+
+        % 最適解と次の最適化に必要な決定変数を抽出する関数群
+        make_u_opt(obj, x_opt);
+        make_phi_opt(obj, x_opt);
+
     end
 
     methods(Static)
