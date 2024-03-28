@@ -22,6 +22,8 @@ classdef dan < handle
         MLD_matrices; % 混合論理動的システムの係数行列を収納する構造体
         MILP_matrices; % 混合整数線形計画問題の係数行列を収納する構造体
 
+        variables_list_map; % 決定変数の種類ごとのリストを収納するdictionary
+
         v_num; % MLDの決定変数の長さ
         prediction_count; % 予測回数
 
@@ -47,6 +49,8 @@ classdef dan < handle
             obj.u_results.set_initial_future_data([1,0,1,0,0,0,0,0]'); % モデルに出てくる前回の信号現示の部分でエラーを起こさないために設定
 
             obj.prediction_count = 0; % 予測回数の初期化
+
+            obj.variables_list_map = dictionary(string.empty, cell.empty); % 決定変数の種類ごとのリストを収納するdictionaryの初期化
         end
 
 
@@ -55,6 +59,7 @@ classdef dan < handle
 
             obj.make_vehs_data(intersection_struct_map, vis_data); % 自動車の位置情報と進行方向の情報を更新
             obj.make_MLD_matrices(); % 混合論理動的システムの係数行列を更新
+            obj.make_variables_list(); % 決定変数の種類ごとのリストを更新
             obj.make_MILP_matrices(); % 混合整数線形計画問題の係数行列を更新
 
         end
@@ -76,9 +81,27 @@ classdef dan < handle
         make_D3_matrix(obj, pos_vehs, first_veh_ids, road_prms);
         make_E_matrix(obj, pos_vehs, first_veh_ids, road_prms);
 
-        % 決定変数内のdelta_1とdelta_cの位置を探索する関数群
+        % 決定変数の種類ごとのリストを作成する関数群
+
+        make_variables_list(obj);
+
         make_delta1_list(obj);
+        make_delta2_list(obj);
+        make_delta3_list(obj);
+
+        make_deltad_list(obj);
+        make_deltap_list(obj);
+        make_deltaf2_list(obj);
+        make_deltaf3_list(obj);
+        make_deltab_list(obj);
+        
         make_deltac_list(obj);
+
+        make_z1_list(obj);
+        make_z2_list(obj);
+        make_z3_list(obj);
+        make_z4_list(obj);
+        make_z5_list(obj);
 
         % 混合整数線形計画問題の形にMLDの係数と信号機制約の係数を変形する関数群
         make_MILP_matrices(obj);

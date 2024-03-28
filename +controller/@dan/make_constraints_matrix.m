@@ -69,7 +69,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
     % 信号の変化の回数の制限
 
     P_tmp = zeros(1, col_num);
-    for step = obj.fix_step:(obj.N_p-1)
+    for step = obj.fix_num:(obj.N_p-1)
         P_tmp(1, (obj.signal_num + 1)*step) = 1;
     end
     obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
