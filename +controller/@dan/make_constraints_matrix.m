@@ -20,8 +20,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
     D = [D1, D2, D3];
 
     % MLDの1ステップ分の決定変数の数を取得
-    [~, col_num] = size(D);
-    obj.v_num = col_num;
+    [~, obj.v_num] = size(D);
 
     % 交差点内の全ての自動車の位置情報をまとめる
     pos_vehs_all = [pos_vehs.north; pos_vehs.south; pos_vehs.east; pos_vehs.west];
@@ -44,10 +43,10 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
     obj.MILP_matrices.P = [obj.MILP_matrices.P, zeros(row_num, (obj.signal_num + 1)*(obj.N_p -1))];
 
     % 信号現示の変化のバイナリ変数を定義 
-    [~, col_num] = size(obj.MILP_matrices.P);
+    [~, obj.variables_size] = size(obj.MILP_matrices.P);
 
     for step = 1:(obj.N_p-1)
-        P_tmp = zeros(4*obj.signal_num, col_num);
+        P_tmp = zeros(4*obj.signal_num, obj.variables_size);
 
         for signal_id = 1: obj.signal_num
             P_tmp((1 + 4*(signal_id -1): 4*signal_id), signal_id + obj.v_num*(step -1)) = [1;-1;-1;1];
@@ -55,7 +54,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
             P_tmp((1 + 4*(signal_id -1): 4*signal_id), obj.v_num*obj.N_p + signal_id + (obj.signal_num + 1)*(step - 1)) = [1;1;-1;-1];
         end
 
-        obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
+        %obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
 
         q_tmp = zeros(4*obj.signal_num, 1);
 
@@ -63,29 +62,30 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
             q_tmp(1 + 4*(signal_id -1),1) = 2;    
         end
 
-        obj.MILP_matrices.q = [obj.MILP_matrices.q; q_tmp];
+        %obj.MILP_matrices.q = [obj.MILP_matrices.q; q_tmp];
     end
 
     % 信号の変化の回数の制限
 
-    P_tmp = zeros(1, col_num);
-    for step = obj.fix_num:(obj.N_p-1)
-        P_tmp(1, (obj.signal_num + 1)*step) = 1;
-    end
-    obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
+    P_tmp = zeros(1, obj.variables_size);
 
-    if mod(obj.prediction_count, 3) == 0
-        obj.MILP_matrices.q = [obj.MILP_matrices.q; 1];
-    else
-        obj.MILP_matrices.q = [obj.MILP_matrices.q; 0];
+    for step = 1:(obj.N_p-1)
+        P_tmp(1, obj.v_num*obj.N_p + (obj.signal_num + 1)*step) = 1;
     end
+
+    %obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
+
+    %obj.MILP_matrices.q = [obj.MILP_matrices.q; obj.m];
 
     % delta_cの固定
+
+    deltac_list = obj.variables_list_map("delta_c");
+    deltac_list = deltac_list{1};
     
-    for veh_id = 1:length(obj.deltac_list)
+    for veh_id = 1:length(deltac_list)
         for step = 1:obj.N_p
-            P_tmp = zeros(1, col_num);
-            P_tmp(obj.deltac_list(veh_id) + obj.signal_num + obj.v_num*(step-1)) = 1;
+            P_tmp = zeros(1, obj.variables_size);
+            P_tmp(deltac_list(veh_id) + obj.v_num*(step-1)) = 1;
             obj.MILP_matrices.Peq = [obj.MILP_matrices.Peq; P_tmp];
 
             q_tmp = 1;
@@ -93,11 +93,12 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
         end
     end
     
+    
 
     % 信号機のマッチング
     
     for step = 1:obj.N_p
-        P_tmp = zeros(5, col_num);
+        P_tmp = zeros(5, obj.variables_size);
         P_tmp(:,1+obj.v_num*(step-1)) = [1;1;0;0;0];
         P_tmp(:,2+obj.v_num*(step-1)) = [1;0;1;0;0];
         P_tmp(:,3+obj.v_num*(step-1)) = [0;-1;0;0;0];
@@ -116,7 +117,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
     % 増えた変数の定義その２
     
     for step = 1:(obj.N_p-1)
-        P_tmp = zeros(1, col_num);
+        P_tmp = zeros(1, obj.variables_size);
         P_tmp(obj.v_num*obj.N_p + (obj.signal_num + 1)*(step -1) + 1 : obj.v_num*obj.N_p + (obj.signal_num + 1)*step) = [-1, -1, -1, -1, -1, -1, -1, -1, 4];
         obj.MILP_matrices.Peq = [obj.MILP_matrices.Peq; P_tmp];
         obj.MILP_matrices.qeq = [obj.MILP_matrices.qeq; 0];
@@ -126,7 +127,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
     % 初期値の固定
     
     for step = 1:obj.fix_num
-        P_tmp = zeros(obj.signal_num, col_num);
+        P_tmp = zeros(obj.signal_num, obj.variables_size);
         for signal_id = 1:8
             P_tmp(signal_id, signal_id + obj.v_num*(step -1)) = 1;
         end

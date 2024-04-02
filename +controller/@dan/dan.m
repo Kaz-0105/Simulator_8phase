@@ -23,9 +23,19 @@ classdef dan < handle
         MILP_matrices; % 混合整数線形計画問題の係数行列を収納する構造体
 
         variables_list_map; % 決定変数の種類ごとのリストを収納するdictionary
+        u_length;           % uの決定変数の数
+        z_length;           % zの決定変数の数
+        delta_length;       % deltaの決定変数の数
 
         v_num; % MLDの決定変数の長さ
+        variables_size; % 決定変数の数
         prediction_count; % 予測回数
+
+        x_opt; % 最適解
+        fval; % 最適解の目的関数の値
+
+        u_opt; % 最適解から次の最適化に必要な信号現示の部分
+        phi_opt; % 最適解から次の最適化に必要な全体として信号現示が変化したことを示すバイナリphiの部分
 
 
     end
@@ -34,6 +44,7 @@ classdef dan < handle
         function obj = dan(id, config, maps)
             obj.id = id; % 交差点のID
             obj.signal_num = 8; % 信号機の数（今回は各道路2車線なので8）
+            obj.u_length = obj.signal_num;
             obj.dt = config.time_step; % タイムステップ
             obj.N_p = config.predictive_horizon; % 予測ホライゾン
             obj.N_c = config.control_horizon; % 制御ホライゾン
@@ -61,6 +72,34 @@ classdef dan < handle
             obj.make_MLD_matrices(); % 混合論理動的システムの係数行列を更新
             obj.make_variables_list(); % 決定変数の種類ごとのリストを更新
             obj.make_MILP_matrices(); % 混合整数線形計画問題の係数行列を更新
+
+        end
+
+        % 混合整数線形計画問題を解く関数
+        function sig = optimize(obj)
+
+            % 混合整数線形計画問題を解く
+
+            f = obj.MILP_matrices.f;
+            intcon = obj.MILP_matrices.intcon;
+            P = obj.MILP_matrices.P;
+            q = obj.MILP_matrices.q;
+            Peq = obj.MILP_matrices.Peq;
+            qeq = obj.MILP_matrices.qeq;
+            lb = obj.MILP_matrices.lb;
+            ub = obj.MILP_matrices.ub;
+
+            if ~isempty(P)
+                [obj.x_opt, obj.fval] = intlinprog(f, [], P, q, Peq, qeq, lb, ub);
+
+                % 最適解から次の最適化に必要な決定変数を抽出
+                obj.make_u_opt(obj.x_opt);
+                obj.make_phi_opt(obj.x_opt);
+            else
+
+            end
+
+            sig = obj.u_opt;
 
         end
     end

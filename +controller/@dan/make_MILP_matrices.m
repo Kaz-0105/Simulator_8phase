@@ -7,6 +7,7 @@ function make_MILP_matrices(obj)
     obj.MILP_matrices.Peq = [];
     obj.MILP_matrices.qeq = [];
     obj.MILP_matrices.intcon = [];
+    obj.MILP_matrices.intcon_binary = [];
     obj.MILP_matrices.lb = [];
     obj.MILP_matrices.ub = [];
 
