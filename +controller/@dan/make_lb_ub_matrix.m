@@ -9,7 +9,6 @@ function make_lb_ub_matrix(obj)
     for variables_id = 1: obj.variables_size
         if intcon_binary(variables_id) == 0
             ub(variables_id) = Inf;
-            lb(variables_id) = - Inf;
         end
     end
 

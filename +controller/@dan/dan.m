@@ -29,7 +29,7 @@ classdef dan < handle
 
         v_num; % MLDの決定変数の長さ
         variables_size; % 決定変数の数
-        prediction_count; % 予測回数
+        prediction_count = 0; % 予測回数
 
         x_opt; % 最適解
         fval; % 最適解の目的関数の値
@@ -90,16 +90,52 @@ classdef dan < handle
             ub = obj.MILP_matrices.ub;
 
             if ~isempty(P)
-                [obj.x_opt, obj.fval] = intlinprog(f, [], P, q, Peq, qeq, lb, ub);
+                % 交差点内に自動車が存在するとき
 
-                % 最適解から次の最適化に必要な決定変数を抽出
-                obj.make_u_opt(obj.x_opt);
-                obj.make_phi_opt(obj.x_opt);
+                options = optimoptions('intlinprog');
+                options.MaxFeasiblePoints = 2;
+                options.IntegerTolerance = 1e-3;
+                options.ConstraintTolerance = 1e-3;
+                options.RelativeGapTolerance = 1e-3;
+                options.MaxNodes = 20000;
+                options.Display = 'off';
+
+                [obj.x_opt, obj.fval] = intlinprog(f', intcon, P, q, Peq, qeq, lb, ub, options);
+
+                if ~isempty(obj.x_opt)
+                    % 実行可能解が見つかったとき
+                    % 最適解から次の最適化に必要な決定変数を抽出
+                    obj.make_u_opt();
+                    obj.make_phi_opt();
+                else
+                    % 実行可能解が見つからなかったとき
+                    % 自動車台数が多いところを出す
+
+                    obj.emergency_treatment();
+                end
             else
+                % 交差点内に自動車が存在しないとき
+                % 今の信号現示を維持する
 
+                u_future = obj.u_results.get_future_data();
+                obj.u_opt = [];
+
+                for step = 1:obj.N_p
+                    obj.u_opt = [obj.u_opt, u_future(:, 1)];
+                end
+
+                obj.phi_opt = zeros(1, obj.N_p -1);
             end
 
+            obj.u_results.update_data(obj.u_opt); % 信号現示のバイナリuの結果を更新
+            obj.phi_results.update_data(obj.phi_opt) % 全体として信号現示が変化したことを示すバイナリphiの結果を更新
+
             sig = obj.u_opt;
+            
+            obj.prediction_count = obj.prediction_count + 1; % 予測回数をカウント
+
+            fprintf('交差点%dの最適化結果:\n', obj.id);
+            disp(sig);
 
         end
     end

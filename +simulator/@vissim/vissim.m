@@ -49,7 +49,7 @@ classdef vissim < handle
             obj.vis_obj.Simulation.set('AttValue', 'NumRuns', config.sim_count);                                             % シミュレーション回数の設定をVissimに渡す
             obj.vis_obj.Simulation.set('AttValue','RandSeed',config.seed);                                                  % 乱数シードの設定をVissimに渡す
             obj.vis_obj.Graphics.CurrentNetworkWindow.set('AttValue','QuickMode',config.graphic_mode);                      % 描画設定をVissimに渡す
-            obj.vis_obj.Simulation.set('AttValue','UseMaxSimSpeed',true);                                                   % シミュレーションを最高速度で行うようにVissimを設定する
+            obj.vis_obj.Simulation.set('AttValue','UseMaxSimSpeed',false);                                                   % シミュレーションを最高速度で行うようにVissimを設定する
             obj.vis_obj.Simulation.set('AttValue','UseAllCores',true);                                                      % シミュレーションに全てのコアを使うようにVissimを設定する
             obj.vis_obj.Simulation.set('AttValue','SimPeriod',config.control_interval*config.num_loop);                     % シミュレーション時間を設定する
 

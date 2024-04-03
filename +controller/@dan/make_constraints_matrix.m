@@ -33,7 +33,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
     E_bar = kron(ones(obj.N_p, 1), E); % E_barの計算
 
     % P、qに代入  
-    obj.MILP_matrices.P = [obj.MILP_matrices.P; C_bar*B_bar - D_bar];
+    obj.MILP_matrices.P = [obj.MILP_matrices.P; C_bar*B_bar + D_bar];
     obj.MILP_matrices.q = [obj.MILP_matrices.q; E_bar - C_bar*A_bar*pos_vehs_all];
 
     % 信号機制約を追加していく
@@ -54,7 +54,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
             P_tmp((1 + 4*(signal_id -1): 4*signal_id), obj.v_num*obj.N_p + signal_id + (obj.signal_num + 1)*(step - 1)) = [1;1;-1;-1];
         end
 
-        %obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
+        obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
 
         q_tmp = zeros(4*obj.signal_num, 1);
 
@@ -62,7 +62,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
             q_tmp(1 + 4*(signal_id -1),1) = 2;    
         end
 
-        %obj.MILP_matrices.q = [obj.MILP_matrices.q; q_tmp];
+        obj.MILP_matrices.q = [obj.MILP_matrices.q; q_tmp];
     end
 
     % 信号の変化の回数の制限
@@ -73,9 +73,9 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
         P_tmp(1, obj.v_num*obj.N_p + (obj.signal_num + 1)*step) = 1;
     end
 
-    %obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
+    obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
 
-    %obj.MILP_matrices.q = [obj.MILP_matrices.q; obj.m];
+    obj.MILP_matrices.q = [obj.MILP_matrices.q; obj.m];
 
     % delta_cの固定
 

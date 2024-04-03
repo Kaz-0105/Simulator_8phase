@@ -2,8 +2,8 @@ inpx_file : '3-3_network\3-3_network.inpx'   # vissimのinpxファイル
 layx_file : '3-3_network\3-3_network.layx'   # vissimのlayxファイル
 graphic_mode : 0                            # 描画モードON=0
 seed : 22                                   # 乱数のシード値
-predictive_horizon : 2                      # 予測ホライゾン
-control_horizon : 1                         # 制御ホライゾン
+predictive_horizon : 4                      # 予測ホライゾン
+control_horizon : 3                         # 制御ホライゾン
 time_step : 3                               # タイムステップ        
 num_loop : 50                               # MPCのサイクルのループ回数
 sim_count : 100                             # シミュレーション回数

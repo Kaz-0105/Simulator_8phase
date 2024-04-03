@@ -34,11 +34,11 @@ classdef u_results < handle
         end
 
         function update_data(obj, u_opt)
-            u_for_past = u_opt(:, 1: obj.N_c);
-            u_for_future = u_opt(:, obj.N_c + 1: obj.N_p);
+            u_past = u_opt(:, 1: obj.N_c);
+            u_future = u_opt(:, obj.N_c + 1: obj.N_p);
 
-            obj.past_data = u_for_past;
-            obj.future_data = u_for_future;
+            obj.past_data = u_past;
+            obj.future_data = u_future;
 
         end
     end

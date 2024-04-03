@@ -9,5 +9,5 @@ function make_u_opt(obj)
     end
 
 
-    obj.u_opt = u_opt;
+    obj.u_opt = round(u_opt);
 end
