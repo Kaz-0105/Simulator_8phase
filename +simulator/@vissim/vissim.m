@@ -85,8 +85,10 @@ classdef vissim < handle
             switch config.prediction_model
                 case 'Newell'
                     obj.controllers = dictionary(int32.empty, controller.newell.empty);
-                case 'Dan'
-                    obj.controllers = dictionary(int32.empty, controller.dan.empty);
+                case 'Dan_4phase'
+                    obj.controllers = dictionary(int32.empty, controller.dan_4phase.empty);
+                case 'Dan_8phase'
+                    obj.controllers = dictionary(int32.empty, controller.dan_8phase.empty);
             end
 
             for group = obj.config.groups
@@ -96,8 +98,10 @@ classdef vissim < handle
                     switch config.prediction_model
                         case 'Newell'
                             obj.controllers(intersection.id) = controller.newell(intersection.id, config, obj.maps);
-                        case 'Dan'
-                            obj.controllers(intersection.id) = controller.dan(intersection.id, config, obj.maps);
+                        case 'Dan_4phase'
+                            obj.controllers(intersection.id) = controller.dan_4phase(intersection.id, config, obj.maps);
+                        case 'Dan_8phase'
+                            obj.controllers(intersection.id) = controller.dan_8phase(intersection.id, config, obj.maps);
                     end
                 end
             end

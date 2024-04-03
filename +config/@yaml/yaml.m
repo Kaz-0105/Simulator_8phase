@@ -90,10 +90,10 @@ classdef yaml<handle
             try 
                 obj.prediction_model = data.prediction_model;
             catch
-                obj.prediction_model = 'Dan';
+                obj.prediction_model = 'Dan_4phase';
             end
 
-            if strcmp(obj.prediction_model,'Dan')
+            if strcmp(obj.prediction_model,'Dan_4phase') || strcmp(obj.prediction_model,'Dan_8phase')
                 prms_data = yaml.loadFile(append(file_dir, 'config_dan.yaml'));
                 obj.model_prms.m = prms_data.m;
                 obj.model_prms.N_s = prms_data.N_s;

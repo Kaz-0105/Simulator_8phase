@@ -1,4 +1,4 @@
-classdef dan < handle
+classdef dan_8phase < handle
     properties(GetAccess = private)
         id; % 交差点のID
         signal_num; % 信号機の数
@@ -9,6 +9,7 @@ classdef dan < handle
         eps; % 微小量
         m; % ホライゾン内の最大変化回数
         fix_num; % 固定するステップ数
+        phase_num = 8; % 信号機のフェーズ数
 
         road_prms; % 交差点を構成する東西南北の道路のパラメータを収納する構造体
 
@@ -41,7 +42,7 @@ classdef dan < handle
     end
 
     methods(Access = public)
-        function obj = dan(id, config, maps)
+        function obj = dan_8phase(id, config, maps)
             obj.id = id; % 交差点のID
             obj.signal_num = 8; % 信号機の数（今回は各道路2車線なので8）
             obj.u_length = obj.signal_num;

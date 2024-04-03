@@ -41,7 +41,7 @@ function make_C_matrix(obj, route_vehs, first_veh_ids)
                 c = zeros(42, num_veh);
 
                 % 車線分岐後の先行車のIDを取得
-                front_veh_id = controller.dan.get_front_veh_id(veh_id, route_vehs);
+                front_veh_id = controller.dan_8phase.get_front_veh_id(veh_id, route_vehs);
 
                 % 係数が0ではない要素に値を代入
                 c(13:22,veh_id) = [1;-1;-1;1;-1;1;-1;1;1;-1]; 
@@ -89,7 +89,7 @@ function make_C_matrix(obj, route_vehs, first_veh_ids)
                 c = zeros(42, num_veh);
 
                 % 車線分岐後の先行車のIDを取得
-                front_veh_id = controller.dan.get_front_veh_id(veh_id, route_vehs);
+                front_veh_id = controller.dan_8phase.get_front_veh_id(veh_id, route_vehs);
 
                 % 係数が0ではない要素に値を代入
                 c(13:22,veh_id) = [1;-1;-1;1;-1;1;-1;1;1;-1];

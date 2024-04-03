@@ -5,10 +5,10 @@ seed : 22                                   # 乱数のシード値
 predictive_horizon : 4                      # 予測ホライゾン
 control_horizon : 3                         # 制御ホライゾン
 time_step : 3                               # タイムステップ        
-num_loop : 50                               # MPCのサイクルのループ回数
+num_loop : 100                               # MPCのサイクルのループ回数
 sim_count : 100                             # シミュレーション回数
 sim_resolution : 10                         # シミュレーション時間で1sあたりに何回自動車の位置を更新するか(解像度)
 control_mode : 'opt'                        # 制御モード
-prediction_model : 'Dan'                    # 予測モデル 
+prediction_model : 'Dan_8phase'             # 予測モデル 
 groups : 
   - ["3-3_network_roads.yaml", "3-3_network_intersections.yaml"]                      # 交差点の情報がまとまったyamlファイル
