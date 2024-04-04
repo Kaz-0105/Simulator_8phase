@@ -94,12 +94,23 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
         obj.MILP_matrices.q = [obj.MILP_matrices.q; q_tmp];
     end
 
+
+    % 青になっていい信号の数の制限
+
+    for step = 1:obj.N_p
+        P_tmp = zeros(1, obj.variables_size);
+        P_tmp(1, 1 + obj.v_num*(step-1): obj.signal_num +obj.v_num*(step-1)) = [1, 1, 1, 1, 1, 1, 1, 1];
+        obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
+
+        obj.MILP_matrices.q = [obj.MILP_matrices.q; 2];
+    end
+
     % 信号の変化の回数の制限
 
     P_tmp = zeros(1, obj.variables_size);
 
     for step = 1:(obj.N_p-1)
-        P_tmp(1, obj.v_num*obj.N_p + (obj.signal_num + 1)*step) = 1;
+        P_tmp(1, obj.v_num*obj.N_p + obj.phase_num*obj.N_p + (obj.phase_num + 1)*step) = 1;
     end
 
     obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
@@ -121,33 +132,13 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
             obj.MILP_matrices.qeq = [obj.MILP_matrices.qeq; q_tmp];
         end
     end
-    
-    
-
-    % 信号機のマッチング
-    
-    for step = 1:obj.N_p
-        P_tmp = zeros(5, obj.variables_size);
-        P_tmp(:,1+obj.v_num*(step-1)) = [1;1;0;0;0];
-        P_tmp(:,2+obj.v_num*(step-1)) = [1;0;1;0;0];
-        P_tmp(:,3+obj.v_num*(step-1)) = [0;-1;0;0;0];
-        P_tmp(:,4+obj.v_num*(step-1)) = [0;0;-1;0;0];
-        P_tmp(:,5+obj.v_num*(step-1)) = [1;0;0;1;0];
-        P_tmp(:,6+obj.v_num*(step-1)) = [1;0;0;0;1];
-        P_tmp(:,7+obj.v_num*(step-1)) = [0;0;0;-1;0];
-        P_tmp(:,8+obj.v_num*(step-1)) = [0;0;0;0;-1];
-
-        obj.MILP_matrices.Peq = [obj.MILP_matrices.Peq; P_tmp];
-        obj.MILP_matrices.qeq = [obj.MILP_matrices.qeq; [1;0;0;0;0]];
-    end
-    
 
 
     % 増えた変数の定義その２
     
     for step = 1:(obj.N_p-1)
         P_tmp = zeros(1, obj.variables_size);
-        P_tmp(obj.v_num*obj.N_p + (obj.signal_num + 1)*(step -1) + 1 : obj.v_num*obj.N_p + (obj.signal_num + 1)*step) = [-1, -1, -1, -1, -1, -1, -1, -1, 4];
+        P_tmp(obj.v_num*obj.N_p + obj.phase_num*obj.N_p + (obj.phase_num + 1)*(step -1) + 1 : obj.v_num*obj.N_p + obj.phase_num*obj.N_p+ (obj.phase_num + 1)*step) = [-1, -1, -1, -1, -1, -1, -1, -1, 2];
         obj.MILP_matrices.Peq = [obj.MILP_matrices.Peq; P_tmp];
         obj.MILP_matrices.qeq = [obj.MILP_matrices.qeq; 0];
     end
