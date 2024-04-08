@@ -9,9 +9,6 @@ classdef vissim < handle
         intersection_struct_map;            % キー：交差点のID、バリュー：交差点の流入出道路に関する構造体
         maps;                               % キー：ディクショナリの名前、バリュー：ディクショナリ
         controllers;                        % 各交差点の制御器をまとめたディクショナリ
-        route_direction_map;
-        link_z;
-        measurement_struct;
         break_time = 0;
         vis_controllers;                    % キー：交差点のID、バリュー：交差点の信号を制御するCOMのオブジェクト
     end
@@ -124,11 +121,6 @@ classdef vissim < handle
         end
 
         function clear_states(obj)
-            obj.measurement_struct = [];
-            obj.measurement_struct.vehs         = [];
-            obj.measurement_struct.time         = [];
-            obj.measurement_struct.AverageDelay = [];
-            obj.measurement_struct.AverageSpeed = [];
         end
 
         function update_states(obj)

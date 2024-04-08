@@ -32,6 +32,14 @@
 			</areaBehavTypeElements>
 		</areaBehaviorType>
 	</areaBehaviorTypes>
+	<cameraPositions>
+		<cameraPosition extentY="644.96825392865048" fov="45" graphicsMode="2D" name="Camera position 1" no="2" pedNo="0" pitchAngle="0" rollAngle="0" vehNo="0" yawAngle="0">
+			<coord x="443.07345027056658" y="-230.02059484761639" z="0"/>
+		</cameraPosition>
+		<cameraPosition extentY="10" fov="45" graphicsMode="3D" name="Camera position 1" no="3" pedNo="0" pitchAngle="37.287882847964227" rollAngle="0" vehNo="0" yawAngle="134.69070802020386">
+			<coord x="499.77625359634101" y="-293.6212242057444" z="54.966453249787214"/>
+		</cameraPosition>
+	</cameraPositions>
 	<colorDistributions>
 		<colorDistribution name="Default" no="1">
 			<colorDistrEl>
@@ -2126,7 +2134,7 @@
 		<areaResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 		<dataColl collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 		<dataCollRawData fromTime="0" toTime="99999" writeFile="false"/>
-		<delays collectData="true" fromTime="0" interval="9" toTime="450"/>
+		<delays collectData="true" fromTime="0" interval="9" toTime="900"/>
 		<dischRec fromTime="0" toTime="99999" writeFile="false"/>
 		<greenTimeDistribution fromTime="0" toTime="99999" writeFile="false"/>
 		<linkResults collectData="false" fromTime="0" interval="99999" perLane="false" toTime="99999"/>
@@ -2152,13 +2160,13 @@
 		<pedTravTmODData fromTime="0" interval="99999" toTime="99999" writeFile="false"/>
 		<pedTravTmRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<pedTravTms collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<queues collectData="true" fromTime="0" interval="9" toTime="450"/>
+		<queues collectData="true" fromTime="0" interval="9" toTime="900"/>
 		<scDetRec writeFile="false"/>
 		<ssam fromTime="0" toTime="99999" writeFile="false"/>
 		<sigChgs writeDatabase="false" writeFile="false"/>
 		<vehInpData writeFile="false"/>
 		<vehInps collectData="true" fromTime="0" interval="99999" toTime="99999"/>
-		<vehNetPerf collectData="true" fromTime="0" interval="9" toTime="450"/>
+		<vehNetPerf collectData="true" fromTime="0" interval="9" toTime="900"/>
 		<vehRec filterType="ALL" fromTime="0" inclParkVehs="false" resolution="1" toTime="99999" writeDatabase="false" writeFile="false">
 			<attributes>
 				<attributeSelection attributeID="SIMSEC" decimals="2" format="SECONDS" showUnits="false"/>
@@ -8093,7 +8101,19 @@
 		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="" no="71" pos="197.8857398776783" sg="9 7" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
 		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="57 1" localNo="0" name="" no="72" pos="47.393445354801813" sg="9 8" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
 	</signalHeads>
-	<simulation comment="" numCores="1" numRuns="100" randSeed="22" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="450" simRes="10" simSpeed="1" startTm="0" useAllCores="true" useMaxSimSpeed="false" volumeIncrDynAssign="0"/>
+	<simulation comment="" numCores="1" numRuns="100" randSeed="22" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="900" simRes="10" simSpeed="8" startTm="0" useAllCores="true" useMaxSimSpeed="false" volumeIncrDynAssign="0"/>
+	<storyboards>
+		<storyboard filename="#data#2D" framerate="10" name="" netLayout="" no="1" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
+			<keyframes>
+				<keyframe camPos="2" dwellTime="500" name="Camera position 1" netLayout="" startTime="0" transType="SMOOTH"/>
+			</keyframes>
+		</storyboard>
+		<storyboard filename="#data#3D" framerate="10" name="" netLayout="" no="2" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
+			<keyframes>
+				<keyframe camPos="3" dwellTime="500" name="Camera position 1" netLayout="" startTime="0" transType="SMOOTH"/>
+			</keyframes>
+		</storyboard>
+	</storyboards>
 	<timeDistributions>
 		<timeDistribution mean="0.5" name="0.5 s" no="1" stdDev="0" type="NORMAL"/>
 		<timeDistribution mean="0.9" name="0.9 s" no="2" stdDev="0" type="NORMAL"/>
