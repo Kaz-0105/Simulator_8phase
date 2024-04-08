@@ -139,18 +139,6 @@ classdef vissim < handle
             end
         end
 
-        %{
-        function sig = optimize(obj)
-
-            sig = [];
-            sig.signal_vec = {};
-
-            for controller = values(obj.controllers)'
-                sig.signal_vec{end + 1} = controller.optimize();
-            end
-        end
-        %}
-
         function sigs = optimize(obj)
 
             sigs = dictionary(int32.empty, cell.empty);
@@ -201,13 +189,10 @@ classdef vissim < handle
                             end 
                         end
                     end
-
                     obj.vis_obj.Simulation.RunContinuous();
                 end
             end
-
         end
-
     end
 
     methods(Access = private)
