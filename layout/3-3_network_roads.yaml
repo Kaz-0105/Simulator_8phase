@@ -22,6 +22,7 @@ roads :
     sig_head_ids : [7, 8]
     speed : 60
     input : 700
+    queue_counter_ids : [1, 49]
 
   - id : 2
     v_ids : [2, 50, 10001]
@@ -44,6 +45,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [31, 32]
     speed : 60
+    queue_counter_ids : [2, 50]
 
   - id : 3
     v_ids : [3, 51, 10002]
@@ -66,11 +68,13 @@ roads :
         dirct : 'right'
     sig_head_ids : [55, 56]
     speed : 60
+    queue_counter_ids : [3, 51]
 
   - id : 4
     v_ids : [4]
     v_mid : 4
     speed : 60
+    queue_counter_ids : [4]
 
   - id : 5
     v_ids : [5, 52, 10003]
@@ -94,6 +98,7 @@ roads :
     sig_head_ids : [15, 16]
     speed : 60
     input : 700
+    queue_counter_ids : [5, 52]
 
   - id : 6
     v_ids : [6, 53, 10004]
@@ -116,6 +121,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [39, 40]
     speed : 60
+    queue_counter_ids : [6, 53]
 
   - id : 7
     v_ids : [7, 54, 10005]
@@ -138,11 +144,13 @@ roads :
         dirct : 'right'
     sig_head_ids : [63, 64]
     speed : 60
+    queue_counter_ids : [7, 54]
 
   - id : 8
     v_ids : [8]
     v_mid : 8
     speed : 60
+    queue_counter_ids : [8]
 
   - id : 9
     v_ids : [9, 55, 10006]
@@ -166,6 +174,7 @@ roads :
     sig_head_ids : [23, 24]
     speed : 60
     input : 700
+    queue_counter_ids : [9, 55]
 
   - id : 10
     v_ids : [10, 56, 10007]
@@ -188,6 +197,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [47, 48]
     speed : 60
+    queue_counter_ids : [10, 56]
 
   - id : 11
     v_ids : [11, 57, 10008]
@@ -210,16 +220,19 @@ roads :
         dirct : 'right'
     sig_head_ids : [71, 72]
     speed : 60
+    queue_counter_ids : [11, 57]
 
   - id : 12
     v_ids : [12]
     v_mid : 12
     speed : 60
+    queue_counter_ids : [12]
 
   - id : 13
     v_ids : [13]
     v_mid : 13
     speed : 60
+    queue_counter_ids : [13]
 
   - id : 14
     v_ids : [14, 58, 10009]
@@ -242,6 +255,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [5, 6]
     speed : 60
+    queue_counter_ids : [14, 58]
 
   - id : 15
     v_ids : [15, 59, 10010]
@@ -264,6 +278,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [29, 30]
     speed : 60
+    queue_counter_ids : [15, 59]
 
   - id : 16
     v_ids : [16, 60, 10011]
@@ -287,11 +302,13 @@ roads :
     sig_head_ids : [53, 54]
     speed : 60
     input : 700
+    queue_counter_ids : [16, 60]
 
   - id : 17
     v_ids : [17]
     v_mid : 17
     speed : 60
+    queue_counter_ids : [17]
 
   - id : 18
     v_ids : [18, 61, 10012]
@@ -314,6 +331,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [13, 14]
     speed : 60
+    queue_counter_ids : [18, 61]
 
   - id : 19
     v_ids : [19, 62, 10013]
@@ -336,6 +354,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [37, 38]
     speed : 60
+    queue_counter_ids : [19, 62]
 
   - id : 20
     v_ids : [20, 63, 10014]
@@ -359,11 +378,13 @@ roads :
     sig_head_ids : [61, 62]
     speed : 60
     input : 700
+    queue_counter_ids : [20, 63]
 
   - id : 21
     v_ids : [21]
     v_mid : 21
     speed : 60
+    queue_counter_ids : [21]
 
   - id : 22
     v_ids : [22, 64, 10015]
@@ -386,6 +407,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [21, 22]
     speed : 60
+    queue_counter_ids : [22, 64]
 
   - id : 23
     v_ids : [23, 65, 10016]
@@ -408,6 +430,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [45, 46]
     speed : 60
+    queue_counter_ids : [23, 65]
 
   - id : 24
     v_ids : [24, 66, 10017]
@@ -431,6 +454,7 @@ roads :
     sig_head_ids : [69, 70]
     speed : 60
     input : 700
+    queue_counter_ids : [24, 66]
 
   - id : 25
     v_ids : [25, 67, 10018]
@@ -454,6 +478,7 @@ roads :
     sig_head_ids : [1, 2]
     speed : 60
     input : 700
+    queue_counter_ids : [25, 67]
 
   - id : 26
     v_ids : [26, 68, 10019]
@@ -476,6 +501,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [9, 10]
     speed : 60
+    queue_counter_ids : [26, 68]
 
   - id : 27
     v_ids : [27, 69, 10020]
@@ -498,11 +524,13 @@ roads :
         dirct : 'right' 
     sig_head_ids : [17, 18]
     speed : 60
+    queue_counter_ids : [27, 69]
 
   - id : 28
     v_ids : [28]
     v_mid : 28
     speed : 60
+    queue_counter_ids : [28]
 
   - id : 29
     v_ids : [29, 70, 10021]
@@ -526,6 +554,7 @@ roads :
     sig_head_ids : [25, 26]
     speed : 60
     input : 700
+    queue_counter_ids : [29, 70]
 
   - id : 30
     v_ids : [30, 71, 10022]
@@ -548,6 +577,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [33, 34]
     speed : 60
+    queue_counter_ids : [30, 71]
 
   - id : 31 
     v_ids : [31, 72, 10023]
@@ -570,11 +600,13 @@ roads :
         dirct : 'right'
     sig_head_ids : [41, 42]
     speed : 60
+    queue_counter_ids : [31, 72]
 
   - id : 32
     v_ids : [32]
     v_mid : 32
     speed : 60
+    queue_counter_ids : [32]
 
   - id : 33
     v_ids : [33, 73, 10024]
@@ -598,6 +630,7 @@ roads :
     sig_head_ids : [49, 50]
     speed : 60
     input : 700
+    queue_counter_ids : [33, 73]
 
   - id : 34
     v_ids : [34, 74, 10025]
@@ -620,6 +653,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [57, 58]
     speed : 60
+    queue_counter_ids : [34, 74]
 
   - id : 35
     v_ids : [35, 75, 10026]
@@ -642,16 +676,19 @@ roads :
         dirct : 'right'
     sig_head_ids : [65, 66]
     speed : 60
+    queue_counter_ids : [35, 75]
 
   - id : 36
     v_ids : [36]
     v_mid : 36
     speed : 60
+    queue_counter_ids : [36]
 
   - id : 37
     v_ids : [37]
     v_mid : 37
     speed : 60
+    queue_counter_ids : [37]
 
   - id : 38
     v_ids : [38, 76, 10027]
@@ -674,6 +711,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [3, 4]
     speed : 60
+    queue_counter_ids : [38, 76]
 
   - id : 39
     v_ids : [39, 77, 10028]
@@ -696,6 +734,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [11, 12]
     speed : 60
+    queue_counter_ids : [39, 77]
 
   - id : 40
     v_ids : [40, 78, 10029]
@@ -719,10 +758,13 @@ roads :
     sig_head_ids : [19, 20]
     speed : 60
     input : 700
+    queue_counter_ids : [40, 78]
 
   - id : 41
     v_ids : [41]
     v_mid : 41
+    speed : 60
+    queue_counter_ids : [41]
 
   - id : 42
     v_ids : [42, 79, 10030]
@@ -745,6 +787,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [27 ,28]
     speed : 60
+    queue_counter_ids : [42, 79]
 
   - id : 43
     v_ids : [43, 80, 10031]
@@ -767,6 +810,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [35, 36]
     speed : 60
+    queue_counter_ids : [43, 80]
 
   - id : 44
     v_ids : [44, 81, 10032]
@@ -790,11 +834,13 @@ roads :
     sig_head_ids : [43, 44]
     speed : 60
     input : 700
+    queue_counter_ids : [44, 81]
 
   - id : 45
     v_ids : [45]
     v_mid : 45
     speed : 60
+    queue_counter_ids : [45]
 
   - id : 46
     v_ids : [46, 82, 10033]
@@ -817,6 +863,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [51, 52]
     speed : 60
+    queue_counter_ids : [46, 82]
 
   - id : 47
     v_ids : [47, 83, 10034]
@@ -839,6 +886,7 @@ roads :
         dirct : 'right'
     sig_head_ids : [59, 60]
     speed : 60
+    queue_counter_ids : [47, 83]
 
   - id : 48
     v_ids : [48, 84, 10035]
@@ -862,3 +910,4 @@ roads :
     sig_head_ids : [67, 68]
     speed : 60
     input : 700
+    queue_counter_ids : [48, 84]

@@ -34,6 +34,7 @@ classdef dan_8phase < handle
 
         x_opt; % 最適解
         fval; % 最適解の目的関数の値
+        calc_time = 0; % 計算時間
 
         u_opt; % 最適解から次の最適化に必要な信号現示の部分
         phi_opt; % 最適解から次の最適化に必要な全体として信号現示が変化したことを示すバイナリphiの部分
@@ -101,7 +102,11 @@ classdef dan_8phase < handle
                 options.MaxNodes = 20000;
                 options.Display = 'off';
 
+                tic;
+
                 [obj.x_opt, obj.fval] = intlinprog(f', intcon, P, q, Peq, qeq, lb, ub, options);
+
+                obj.calc_time = toc;
 
                 if ~isempty(obj.x_opt)
                     % 実行可能解が見つかったとき
@@ -126,6 +131,7 @@ classdef dan_8phase < handle
                 end
 
                 obj.phi_opt = zeros(1, obj.N_p -1);
+                obj.calc_time = 0;
             end
 
             obj.u_results.update_data(obj.u_opt); % 信号現示のバイナリuの結果を更新
@@ -138,6 +144,10 @@ classdef dan_8phase < handle
             fprintf('交差点%dの最適化結果:\n', obj.id);
             disp(sig);
 
+        end
+
+        function calc_time = get_calc_time(obj)
+            calc_time = obj.calc_time;
         end
     end
 

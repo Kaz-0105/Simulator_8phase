@@ -81,6 +81,14 @@ function group = parse_group(roads_file, intersections_file)
             tmp_road.speed = 60;
         end
 
+        % queue_counterのIDを取得
+        tmp_road.queue_counter_ids = [];
+        for queue_counter_id = road_data.queue_counter_ids
+            queue_counter_id = queue_counter_id{1};
+            tmp_road.queue_counter_ids(end + 1) = queue_counter_id;
+        end
+        
+
         group.roads{end + 1} = tmp_road;
     end
 

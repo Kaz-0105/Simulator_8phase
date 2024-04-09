@@ -22,4 +22,9 @@ for sim_count = 1:config.sim_count
         vissim.update_simulation(sim_step);
     end
     
+    % 結果のプロット
+
+    vissim.plot_results();
 end
+
+

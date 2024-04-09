@@ -6,10 +6,13 @@ classdef vissim < handle
         link_type_map;                      % キー：リンクのID、バリュー：リンクの種類
         road_link_map;                      % キー：道路のID、バリュー：その道路に属するリンクのIDの配列が入ったセル配列
         road_struct_map;                    % キー：道路のID、バリュー：道路の長さに関する構造体
+        link_input_output_map;              % キー：リンクのID、バリュー：そのリンクが末端流入リンクまたは末端流出リンクであるかどうか
         intersection_struct_map;            % キー：交差点のID、バリュー：交差点の流入出道路に関する構造体
+        link_queue_map;                     % キー：リンクのID、バリュー：そのリンクのキューカウンターのID
         maps;                               % キー：ディクショナリの名前、バリュー：ディクショナリ
         controllers;                        % 各交差点の制御器をまとめたディクショナリ
-        break_time = 0;
+        measurements;                       % vissim_measurementクラスの変数
+        break_time = 0;                     % シミュレーションのブレイクポイントの時間
         vis_controllers;                    % キー：交差点のID、バリュー：交差点の信号を制御するCOMのオブジェクト
     end
 
@@ -70,13 +73,24 @@ classdef vissim < handle
             obj.intersection_struct_map = dictionary(int32.empty, struct.empty);
             obj.make_intersection_struct_map();
 
+            % link_input_output_mapの作成
+            obj.link_input_output_map = dictionary(int32.empty, string.empty);
+            obj.make_link_input_output_map();
+
+            % link_queue_mapの作成
+            obj.link_queue_map = dictionary(int32.empty, int32.empty);
+            obj.make_link_queue_map();
+
             % mapをまとめたdictionaryの作成
             obj.maps = dictionary(string.empty, dictionary);
             obj.maps('link_road_map') = obj.link_road_map;
             obj.maps('link_type_map') = obj.link_type_map;
             obj.maps('road_link_map') = obj.road_link_map;
             obj.maps('road_struct_map') = obj.road_struct_map;
+            obj.maps('link_input_output_map') = obj.link_input_output_map;
             obj.maps('intersection_struct_map') = obj.intersection_struct_map;
+            obj.maps('link_queue_map') = obj.link_queue_map;
+            
 
             % 制御器の設定
             switch config.prediction_model
@@ -102,6 +116,9 @@ classdef vissim < handle
                     end
                 end
             end
+
+            % vissimA_measurementsクラスの変数の設定
+            obj.measurements = simulator.vissim_measurements(obj.vis_obj);
 
             % 制御器のCOMオブジェクトの設定
 
@@ -163,7 +180,7 @@ classdef vissim < handle
                 sigs = obj.optimize();
 
                 for step = 1:obj.config.control_horizon
-                    obj.break_time = obj.break_time + obj.config.control_interval;
+                    obj.break_time = obj.break_time + obj.config.time_step;
                     obj.vis_obj.Simulation.set('AttValue','SimBreakAt',obj.break_time);
 
                     for intersection_id = keys(obj.vis_controllers)'
@@ -183,7 +200,14 @@ classdef vissim < handle
                     end
                     obj.vis_obj.Simulation.RunContinuous();
                 end
+        
             end
+            obj.measurements.update_data(obj.vis_obj, obj.maps, obj.controllers);
+        end
+
+        function plot_results(obj)
+            obj.measurements.plot_calc_time_data(obj.config);
+            obj.measurements.plot_queue_data(obj.config);
         end
     end
 
@@ -192,6 +216,8 @@ classdef vissim < handle
         make_link_type_map(obj);
         make_road_link_map(obj);
         make_road_struct_map(obj);
+        make_link_input_output_map(obj);
+        make_link_queue_map(obj);
     end
 
     methods(Static)

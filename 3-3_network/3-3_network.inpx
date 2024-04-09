@@ -33,11 +33,11 @@
 		</areaBehaviorType>
 	</areaBehaviorTypes>
 	<cameraPositions>
+		<cameraPosition extentY="10" fov="45" graphicsMode="3D" name="Camera position 1" no="1" pedNo="0" pitchAngle="12.077739862207979" rollAngle="0" vehNo="0" yawAngle="99.740282517223946">
+			<coord x="444.34811254002722" y="-321.86563913250569" z="18.526421585028501"/>
+		</cameraPosition>
 		<cameraPosition extentY="644.96825392865048" fov="45" graphicsMode="2D" name="Camera position 1" no="2" pedNo="0" pitchAngle="0" rollAngle="0" vehNo="0" yawAngle="0">
 			<coord x="443.07345027056658" y="-230.02059484761639" z="0"/>
-		</cameraPosition>
-		<cameraPosition extentY="10" fov="45" graphicsMode="3D" name="Camera position 1" no="3" pedNo="0" pitchAngle="37.287882847964227" rollAngle="0" vehNo="0" yawAngle="134.69070802020386">
-			<coord x="499.77625359634101" y="-293.6212242057444" z="54.966453249787214"/>
 		</cameraPosition>
 	</cameraPositions>
 	<colorDistributions>
@@ -8110,7 +8110,7 @@
 		</storyboard>
 		<storyboard filename="#data#3D" framerate="10" name="" netLayout="" no="2" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
 			<keyframes>
-				<keyframe camPos="3" dwellTime="500" name="Camera position 1" netLayout="" startTime="0" transType="SMOOTH"/>
+				<keyframe camPos="1" dwellTime="500" name="Camera position 1" netLayout="" startTime="0" transType="SMOOTH"/>
 			</keyframes>
 		</storyboard>
 	</storyboards>
@@ -8221,62 +8221,62 @@
 	<vehicleInputs>
 		<vehicleInput anmFlag="false" link="1" name="1" no="1">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="16" name="" no="2">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="5" name="" no="3">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="20" name="" no="4">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="9" name="" no="5">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="24" name="" no="6">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="25" name="" no="7">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="40" name="" no="8">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="29" name="" no="9">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="44" name="" no="10">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="33" name="" no="11">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="48" name="" no="12">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 	</vehicleInputs>

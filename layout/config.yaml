@@ -12,3 +12,14 @@ control_mode : 'opt'                        # 制御モード
 prediction_model : 'Dan_8phase'             # 予測モデル 
 groups : 
   - ["3-3_network_roads.yaml", "3-3_network_intersections.yaml"]                      # 交差点の情報がまとまったyamlファイル
+
+plot_list :
+  - data : "calc_time"
+    type : "all"
+  - data : "calc_time"
+    type : "one"
+  - data : "queue_length"
+    type : "all"
+  - data : "queue_length"
+    type : "one"
+  
