@@ -1,4 +1,4 @@
-function update_queue_data(obj, vis_obj, maps)
+function update_queue_data(obj, maps)
     intersection_struct_map = maps("intersection_struct_map");
     road_link_map = maps("road_link_map");
     link_queue_map = maps("link_queue_map");
@@ -15,7 +15,7 @@ function update_queue_data(obj, vis_obj, maps)
             for link_id = input_road_link_ids{1}
                 if isKey(link_queue_map, link_id)
                     queue_counter_id = link_queue_map(link_id);
-                    queue_counter_obj = vis_obj.Net.QueueCounters.ItemByKey(queue_counter_id);
+                    queue_counter_obj = obj.vis_obj.Net.QueueCounters.ItemByKey(queue_counter_id);
                     tmp_queue_length = tmp_queue_length + queue_counter_obj.get('AttValue', 'QLen(Current, Last)');
                 end
             end

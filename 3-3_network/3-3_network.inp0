@@ -485,8 +485,65 @@
 		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="10140" link2="10143" mesoCritGap="3.5" minGapBlockDef="3" no="330" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
 	</conflictAreas>
 	<dataCollectionMeasurements>
-		<dataCollectionMeasurement name="" no="1"/>
+		<dataCollectionMeasurement name="input" no="1">
+			<dataCollectionPoints>
+				<intObjectRef key="1"/>
+				<intObjectRef key="2"/>
+				<intObjectRef key="3"/>
+				<intObjectRef key="4"/>
+				<intObjectRef key="5"/>
+				<intObjectRef key="6"/>
+				<intObjectRef key="7"/>
+				<intObjectRef key="8"/>
+				<intObjectRef key="9"/>
+				<intObjectRef key="10"/>
+				<intObjectRef key="11"/>
+				<intObjectRef key="12"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="output" no="2">
+			<dataCollectionPoints>
+				<intObjectRef key="13"/>
+				<intObjectRef key="14"/>
+				<intObjectRef key="15"/>
+				<intObjectRef key="16"/>
+				<intObjectRef key="17"/>
+				<intObjectRef key="18"/>
+				<intObjectRef key="19"/>
+				<intObjectRef key="20"/>
+				<intObjectRef key="21"/>
+				<intObjectRef key="22"/>
+				<intObjectRef key="23"/>
+				<intObjectRef key="24"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
 	</dataCollectionMeasurements>
+	<dataCollectionPoints>
+		<dataCollectionPoint lane="1 1" name="" no="1" pos="0.5"/>
+		<dataCollectionPoint lane="5 1" name="" no="2" pos="0.5"/>
+		<dataCollectionPoint lane="9 1" name="" no="3" pos="0.5"/>
+		<dataCollectionPoint lane="16 1" name="" no="4" pos="0.5"/>
+		<dataCollectionPoint lane="20 1" name="" no="5" pos="0.5"/>
+		<dataCollectionPoint lane="24 1" name="" no="6" pos="0.5"/>
+		<dataCollectionPoint lane="25 1" name="" no="7" pos="0.5"/>
+		<dataCollectionPoint lane="29 1" name="" no="8" pos="0.5"/>
+		<dataCollectionPoint lane="33 1" name="" no="9" pos="0.5"/>
+		<dataCollectionPoint lane="40 1" name="" no="10" pos="0.5"/>
+		<dataCollectionPoint lane="44 1" name="" no="11" pos="0.5"/>
+		<dataCollectionPoint lane="48 1" name="" no="12" pos="0.5"/>
+		<dataCollectionPoint lane="13 1" name="" no="13" pos="199"/>
+		<dataCollectionPoint lane="17 1" name="" no="14" pos="199"/>
+		<dataCollectionPoint lane="21 1" name="" no="15" pos="199"/>
+		<dataCollectionPoint lane="4 1" name="" no="16" pos="199"/>
+		<dataCollectionPoint lane="8 1" name="" no="17" pos="199"/>
+		<dataCollectionPoint lane="12 1" name="" no="18" pos="199"/>
+		<dataCollectionPoint lane="37 1" name="" no="19" pos="199"/>
+		<dataCollectionPoint lane="41 1" name="" no="20" pos="199"/>
+		<dataCollectionPoint lane="45 1" name="" no="21" pos="199"/>
+		<dataCollectionPoint lane="28 1" name="" no="22" pos="199"/>
+		<dataCollectionPoint lane="32 1" name="" no="23" pos="199"/>
+		<dataCollectionPoint lane="36 1" name="" no="24" pos="199"/>
+	</dataCollectionPoints>
 	<delayMeasurements>
 		<delayMeasurement name="" no="1">
 			<vehTravTmMeas>
@@ -2132,9 +2189,9 @@
 		<areaMeasRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<areaMeasResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 		<areaResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<dataColl collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<dataColl collectData="true" fromTime="0" interval="9" toTime="99999"/>
 		<dataCollRawData fromTime="0" toTime="99999" writeFile="false"/>
-		<delays collectData="true" fromTime="0" interval="9" toTime="900"/>
+		<delays collectData="false" fromTime="0" interval="9" toTime="99999"/>
 		<dischRec fromTime="0" toTime="99999" writeFile="false"/>
 		<greenTimeDistribution fromTime="0" toTime="99999" writeFile="false"/>
 		<linkResults collectData="false" fromTime="0" interval="99999" perLane="false" toTime="99999"/>
@@ -2160,13 +2217,13 @@
 		<pedTravTmODData fromTime="0" interval="99999" toTime="99999" writeFile="false"/>
 		<pedTravTmRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<pedTravTms collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<queues collectData="true" fromTime="0" interval="9" toTime="900"/>
+		<queues collectData="true" fromTime="0" interval="9" toTime="99999"/>
 		<scDetRec writeFile="false"/>
 		<ssam fromTime="0" toTime="99999" writeFile="false"/>
 		<sigChgs writeDatabase="false" writeFile="false"/>
 		<vehInpData writeFile="false"/>
 		<vehInps collectData="true" fromTime="0" interval="99999" toTime="99999"/>
-		<vehNetPerf collectData="true" fromTime="0" interval="9" toTime="900"/>
+		<vehNetPerf collectData="true" fromTime="0" interval="9" toTime="99999"/>
 		<vehRec filterType="ALL" fromTime="0" inclParkVehs="false" resolution="1" toTime="99999" writeDatabase="false" writeFile="false">
 			<attributes>
 				<attributeSelection attributeID="SIMSEC" decimals="2" format="SECONDS" showUnits="false"/>
@@ -2178,7 +2235,7 @@
 			</attributes>
 		</vehRec>
 		<vehTravTmRawData fromTime="0" toTime="99999" writeDatabase="false" writeFile="false"/>
-		<vehTravTms aggrBySect="DESTINATION" collectData="true" fromTime="0" interval="99999" toTime="99999"/>
+		<vehTravTms aggrBySect="DESTINATION" collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 	</evaluation>
 	<levels>
 		<level name="Base" no="1" zCoord="0"/>
@@ -8221,62 +8278,62 @@
 	<vehicleInputs>
 		<vehicleInput anmFlag="false" link="1" name="1" no="1">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="16" name="" no="2">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="5" name="" no="3">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="20" name="" no="4">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="9" name="" no="5">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="24" name="" no="6">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="25" name="" no="7">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="40" name="" no="8">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="29" name="" no="9">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="44" name="" no="10">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="33" name="" no="11">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="48" name="" no="12">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="500"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
 			</timeIntVehVols>
 		</vehicleInput>
 	</vehicleInputs>

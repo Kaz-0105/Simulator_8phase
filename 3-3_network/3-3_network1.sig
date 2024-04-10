@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sc version="202001" id="3" name="" frequency="10" steps="0" defaultIntergreenMatrix="0" interstagesUsingMinDurations="true" checkSum="3240432161">
+<sc version="202001" id="1" name="" frequency="10" steps="0" defaultIntergreenMatrix="0" interstagesUsingMinDurations="true" checkSum="4275686344">
   <signaldisplays>
     <display id="1" name="Red" state="RED">
       <patterns>
@@ -86,78 +86,78 @@
   </sgs>
   <intergreenmatrices />
   <progs>
-    <prog id="1" cycletime="90000" switchpoint="0" offset="0" intergreens="0" fitness="0.000000" vehicleCount="0" name="Signal program 1">
+    <prog id="1" cycletime="54000" switchpoint="0" offset="0" intergreens="0" fitness="0.000000" vehicleCount="0" name="Signal program 1">
       <sgs>
         <sg sg_id="1" signal_sequence="7">
           <cmds>
             <cmd display="3" begin="0" />
-            <cmd display="1" begin="29500" />
+            <cmd display="1" begin="18000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="4" duration="1500" />
+            <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
         <sg sg_id="2" signal_sequence="7">
           <cmds>
-            <cmd display="3" begin="29500" />
-            <cmd display="1" begin="45000" />
+            <cmd display="3" begin="18000" />
+            <cmd display="1" begin="27000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="4" duration="1500" />
+            <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
         <sg sg_id="3" signal_sequence="7">
           <cmds>
             <cmd display="3" begin="0" />
-            <cmd display="1" begin="29500" />
+            <cmd display="1" begin="18000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="4" duration="1500" />
+            <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
         <sg sg_id="4" signal_sequence="7">
           <cmds>
-            <cmd display="3" begin="29500" />
-            <cmd display="1" begin="45000" />
+            <cmd display="3" begin="18000" />
+            <cmd display="1" begin="27000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="4" duration="1500" />
+            <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
         <sg sg_id="5" signal_sequence="7">
           <cmds>
-            <cmd display="3" begin="45000" />
-            <cmd display="1" begin="74500" />
+            <cmd display="3" begin="27000" />
+            <cmd display="1" begin="45000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="4" duration="1500" />
+            <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
         <sg sg_id="6" signal_sequence="7">
           <cmds>
             <cmd display="1" begin="0" />
-            <cmd display="3" begin="74500" />
+            <cmd display="3" begin="45000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="4" duration="1500" />
+            <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
         <sg sg_id="7" signal_sequence="7">
           <cmds>
-            <cmd display="3" begin="45000" />
-            <cmd display="1" begin="74500" />
+            <cmd display="3" begin="27000" />
+            <cmd display="1" begin="45000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="4" duration="1500" />
+            <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
         <sg sg_id="8" signal_sequence="7">
           <cmds>
             <cmd display="1" begin="0" />
-            <cmd display="3" begin="74500" />
+            <cmd display="3" begin="45000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="4" duration="1500" />
+            <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
       </sgs>

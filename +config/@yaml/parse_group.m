@@ -124,32 +124,8 @@ function group = parse_group(roads_file, intersections_file)
             tmp_intersection.output_road_ids(end + 1) = output_road_id{1};
         end
 
-        % フェーズ分けのリストを取得
-        %{
-        tmp_intersection.phases = {};
-
-        for phase = intersection_data.phs
-            tmp_phase = [];
-            phase = phase{1};
-
-            % フェーズのIDを取得
-            tmp_phase.id = phase.id;
-
-            % そのフェーズに青になる道路のIDを取得
-            tmp_phase.road_ids = [];
-
-            for road_id = phase.road_ids
-                tmp_phase.road_ids(end + 1) = road_id{1};
-            end
-
-            % そのフェーズのタイプを取得（シンメトリックかスタンダードか）
-            tmp_phase.type = phase.type;
-
-            tmp_intersection.phases{end + 1} = tmp_phase;
-        end
-        %}
-
         group.intersections{end + 1} = tmp_intersection;
+        
     end
 
 

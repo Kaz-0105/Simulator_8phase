@@ -94,7 +94,7 @@ classdef dan_4phase < handle
                 % 交差点内に自動車が存在するとき
 
                 options = optimoptions('intlinprog');
-                options.MaxFeasiblePoints = 2;
+                options.MaxFeasiblePoints = 1;
                 options.IntegerTolerance = 1e-3;
                 options.ConstraintTolerance = 1e-3;
                 options.RelativeGapTolerance = 1e-3;

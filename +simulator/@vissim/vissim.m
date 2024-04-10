@@ -83,13 +83,13 @@ classdef vissim < handle
 
             % mapをまとめたdictionaryの作成
             obj.maps = dictionary(string.empty, dictionary);
-            obj.maps('link_road_map') = obj.link_road_map;
-            obj.maps('link_type_map') = obj.link_type_map;
-            obj.maps('road_link_map') = obj.road_link_map;
-            obj.maps('road_struct_map') = obj.road_struct_map;
-            obj.maps('link_input_output_map') = obj.link_input_output_map;
-            obj.maps('intersection_struct_map') = obj.intersection_struct_map;
-            obj.maps('link_queue_map') = obj.link_queue_map;
+            obj.maps("link_road_map") = obj.link_road_map;
+            obj.maps("link_type_map") = obj.link_type_map;
+            obj.maps("road_link_map") = obj.road_link_map;
+            obj.maps("road_struct_map") = obj.road_struct_map;
+            obj.maps("link_input_output_map") = obj.link_input_output_map;
+            obj.maps("intersection_struct_map") = obj.intersection_struct_map;
+            obj.maps("link_queue_map") = obj.link_queue_map;
             
 
             % 制御器の設定
@@ -135,6 +135,10 @@ classdef vissim < handle
 
         function v_obj = get_vissim_obj(obj)
             v_obj = obj.vis_obj;
+        end
+
+        function measurements = get_measurements(obj)
+            measurements = obj.measurements;
         end
 
         function clear_states(obj)
@@ -202,12 +206,7 @@ classdef vissim < handle
                 end
         
             end
-            obj.measurements.update_data(obj.vis_obj, obj.maps, obj.controllers);
-        end
-
-        function plot_results(obj)
-            obj.measurements.plot_calc_time_data(obj.config);
-            obj.measurements.plot_queue_data(obj.config);
+            obj.measurements.update_data(obj.maps, obj.controllers);
         end
     end
 
