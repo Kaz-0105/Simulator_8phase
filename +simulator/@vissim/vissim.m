@@ -12,6 +12,7 @@ classdef vissim < handle
         maps;                               % キー：ディクショナリの名前、バリュー：ディクショナリ
         controllers;                        % 各交差点の制御器をまとめたディクショナリ
         measurements;                       % vissim_measurementクラスの変数
+        vis_data;                           % vissim_dataクラスの変数
         break_time = 0;                     % シミュレーションのブレイクポイントの時間
         vis_controllers;                    % キー：交差点のID、バリュー：交差点の信号を制御するCOMのオブジェクト
     end
@@ -145,11 +146,12 @@ classdef vissim < handle
         end
 
         function update_states(obj)
-            vis_data = simulator.vissim_data(obj.vis_obj, obj.maps);
+            obj.vis_data = simulator.vissim_data(obj.vis_obj, obj.maps);
             
             for controller = values(obj.controllers)'
-                controller.update_states(obj.intersection_struct_map, vis_data);
+                controller.update_states(obj.intersection_struct_map, obj.vis_data);
             end
+
         end
 
         function sigs = optimize(obj)

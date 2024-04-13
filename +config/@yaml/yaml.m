@@ -13,6 +13,7 @@ classdef yaml<handle
         sim_resolution = 0;         % シミュレーション時間で1sあたりに何回自動車の位置を更新するか(解像度)
         control_mode = 'off';
         prediction_model = 'Dan';
+        plot_list = {};
         model_prms = [];
         groups = {};
     end
@@ -101,6 +102,18 @@ classdef yaml<handle
                 obj.model_prms.fix_num = prms_data.fix_num;
             elseif strcmp(obj.prediction_model,'Newell')
             end
+
+            % 出力するデータに関して
+            for plot = data.plot_list
+                plot = plot{1};
+
+                plot_struct = [];
+                plot_struct.data = plot.data;
+                plot_struct.type = plot.type;
+
+                obj.plot_list{end+1} = plot_struct;
+            end
+
 
             % group構造体の作成（道路の配置や進路割合などをまとめた構造体）
 

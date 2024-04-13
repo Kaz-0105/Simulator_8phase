@@ -21,6 +21,8 @@ for sim_count = 1:config.sim_count
     for sim_step = 1:config.num_loop
         vissim.update_simulation(sim_step);
     end
+
+    plot_class = tool.plot(vissim.get_measurements(), config);
     
 end
 

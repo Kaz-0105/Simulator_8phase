@@ -94,11 +94,10 @@ classdef dan_4phase < handle
                 % 交差点内に自動車が存在するとき
 
                 options = optimoptions('intlinprog');
-                options.MaxFeasiblePoints = 1;
                 options.IntegerTolerance = 1e-3;
                 options.ConstraintTolerance = 1e-3;
                 options.RelativeGapTolerance = 1e-3;
-                options.MaxNodes = 20000;
+                options.MaxTime = 10;
                 options.Display = 'off';
 
                 tic;
@@ -117,6 +116,7 @@ classdef dan_4phase < handle
                     % 自動車台数が多いところを出す
 
                     obj.emergency_treatment();
+                    obj.calc_time = 0;
                 end
             else
                 % 交差点内に自動車が存在しないとき

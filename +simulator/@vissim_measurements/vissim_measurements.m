@@ -10,6 +10,7 @@ classdef vissim_measurements < handle
         output_data_map;  % 末端道路ごとの流出量の時系列データ格納するディクショナリ
         queue_data_map;   % 交差点ごとの待ち行列の時系列データを格納するディクショナリ
         calc_time_data_map;   % 交差点ごとの計算時間の時系列データを格納するディクショナリ
+        num_vehs_data_map;   % 交差点ごとの車両数の時系列データを格納するディクショナリ
 
         link_DC_measurement_map; % キー：リンクのID、バリュー：Data Collection measurementのIDのディクショナリ
     end
@@ -23,6 +24,7 @@ classdef vissim_measurements < handle
             obj.output_data_map = dictionary(int32.empty, cell.empty);
             obj.queue_data_map = dictionary(int32.empty, struct.empty);
             obj.calc_time_data_map = dictionary(int32.empty, cell.empty);
+            obj.num_vehs_data_map = dictionary(int32.empty, cell.empty);
 
             obj.link_DC_measurement_map = dictionary(int32.empty, int32.empty);
             obj.make_link_DC_measurement_map();
@@ -34,13 +36,11 @@ classdef vissim_measurements < handle
             obj.update_input_output_data(maps);
             obj.update_queue_data(maps);
             obj.update_calc_time_data(controllers);
+            obj.update_num_vehs_data(controllers);
         end
 
-        function input_data_map = get_input_data_map(obj)
+        function [input_data_map, output_data_map] = get_input_output_data_map(obj)
             input_data_map = obj.input_data_map;
-        end
-
-        function output_data_map = get_output_data_map(obj)
             output_data_map = obj.output_data_map;
         end
 
@@ -48,20 +48,12 @@ classdef vissim_measurements < handle
             queue_data_map = obj.queue_data_map;
         end
 
-        function calc_time_data = get_calc_time_data(obj)
-            calc_time_data = obj.calc_time_data;
+        function calc_time_data_map = get_calc_time_data_map(obj)
+            calc_time_data_map = obj.calc_time_data_map;
         end
 
-        function plot_data(obj, data_map_name)
-            if strcmp(data_map_name, "input")
-                obj.plot_input_data();
-            elseif strcmp(data_map_name, "output")
-                obj.plot_output_data();
-            elseif strcmp(data_map_name, "queue")
-                obj.plot_queue_data();
-            elseif strcmp(data_map_name, "calc_time")
-                obj.plot_calc_time_data();
-            end
+        function num_vehs_data_map = get_num_vehs_data_map(obj)
+            num_vehs_data_map = obj.num_vehs_data_map;
         end
     end
 
@@ -74,6 +66,7 @@ classdef vissim_measurements < handle
         update_input_output_data(obj, maps)
         update_queue_data(obj, maps)
         update_calc_time_data(obj, controllers)
+        update_num_vehs_data(obj, controllers)
 
     end
 

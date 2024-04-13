@@ -18,6 +18,7 @@ classdef dan_8phase < handle
 
         pos_vehs; % 自動車の位置情報をまとめた構造体
         route_vehs; % 自動車の進行方向の情報をまとめた構造体
+        num_vehs; % 自動車の数をまとめた構造体
         first_veh_ids; % 先頭車の情報をまとめた構造体
 
         MLD_matrices; % 混合論理動的システムの係数行列を収納する構造体
@@ -95,12 +96,11 @@ classdef dan_8phase < handle
                 % 交差点内に自動車が存在するとき
 
                 options = optimoptions('intlinprog');
-                options.MaxFeasiblePoints = 1;
                 options.IntegerTolerance = 1e-3;
                 options.ConstraintTolerance = 1e-3;
                 options.RelativeGapTolerance = 1e-3;
-                options.MaxNodes = 20000;
-                options.Display = 'off';
+                options.MaxTime = 10;
+                options.Display = 'final';
 
                 tic;
 
@@ -118,6 +118,7 @@ classdef dan_8phase < handle
                     % 自動車台数が多いところを出す
 
                     obj.emergency_treatment();
+                    obj.calc_time = 0;
                 end
             else
                 % 交差点内に自動車が存在しないとき
@@ -148,6 +149,10 @@ classdef dan_8phase < handle
 
         function calc_time = get_calc_time(obj)
             calc_time = obj.calc_time;
+        end
+
+        function num_vehs = get_num_vehs(obj)
+            num_vehs = obj.num_vehs;
         end
     end
 

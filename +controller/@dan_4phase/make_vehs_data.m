@@ -65,4 +65,11 @@ function make_vehs_data(obj, intersection_struct_map, vis_data)
         end
 
     end
+
+    % num_vehsを計算
+    obj.num_vehs.north = length(obj.pos_vehs.north);
+    obj.num_vehs.south = length(obj.pos_vehs.south);
+    obj.num_vehs.east = length(obj.pos_vehs.east);
+    obj.num_vehs.west = length(obj.pos_vehs.west);
+    
 end

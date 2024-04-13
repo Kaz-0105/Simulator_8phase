@@ -6,7 +6,7 @@ predictive_horizon : 4                      # 予測ホライゾン
 control_horizon : 3                         # 制御ホライゾン
 time_step : 3                               # タイムステップ        
 num_loop : 100                               # MPCのサイクルのループ回数
-sim_count : 100                             # シミュレーション回数
+sim_count : 1                             # シミュレーション回数
 sim_resolution : 10                         # シミュレーション時間で1sあたりに何回自動車の位置を更新するか(解像度)
 control_mode : 'opt'                        # 制御モード
 prediction_model : 'Dan_8phase'             # 予測モデル 
@@ -16,10 +16,8 @@ groups :
 plot_list :
   - data : "calc_time"
     type : "all"
-  - data : "calc_time"
-    type : "one"
   - data : "queue_length"
     type : "all"
-  - data : "queue_length"
-    type : "one"
+  - data : "num_vehs"
+    type : "all"
   
