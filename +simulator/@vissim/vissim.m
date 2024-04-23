@@ -91,31 +91,22 @@ classdef vissim < handle
             obj.maps("link_input_output_map") = obj.link_input_output_map;
             obj.maps("intersection_struct_map") = obj.intersection_struct_map;
             obj.maps("link_queue_map") = obj.link_queue_map;
-            
 
             % 制御器の設定
-            switch config.prediction_model
-                case 'Newell'
-                    obj.controllers = dictionary(int32.empty, controller.newell.empty);
-                case 'Dan_4phase'
-                    obj.controllers = dictionary(int32.empty, controller.dan_4phase.empty);
-                case 'Dan_8phase'
-                    obj.controllers = dictionary(int32.empty, controller.dan_8phase.empty);
-            end
 
-            for group = obj.config.groups
-                group = group{1};
-                for intersection = group.intersections
-                    intersection = intersection{1};
-                    switch config.prediction_model
-                        case 'Newell'
-                            obj.controllers(intersection.id) = controller.newell(intersection.id, config, obj.maps);
-                        case 'Dan_4phase'
-                            obj.controllers(intersection.id) = controller.dan_4phase(intersection.id, config, obj.maps);
-                        case 'Dan_8phase'
-                            obj.controllers(intersection.id) = controller.dan_8phase(intersection.id, config, obj.maps);
-                    end
-                end
+            obj.controllers = dictionary(int32.empty, cell.empty);
+
+            for intersection_struct = values(obj.intersection_struct_map)'
+                switch intersection_struct.control_method
+                    case "Dan_4phase"
+                        obj.controllers(intersection_struct.id) = {controller.dan_4phase(intersection_struct.id, config, obj.maps)};
+                    case "Dan_8phase"
+                        obj.controllers(intersection_struct.id) = {controller.dan_8phase(intersection_struct.id, config, obj.maps)};
+                    case "Fix"
+                        obj.controllers(intersection_struct.id) = {controller.fix(intersection_struct.id, config, obj.maps)};
+                    case "Max_queue"
+                        obj.controllers(intersection_struct.id) = {controller.max_queue(intersection_struct.id, config, obj.maps)};
+                end    
             end
 
             % vissimA_measurementsクラスの変数の設定
@@ -149,6 +140,7 @@ classdef vissim < handle
             obj.vis_data = simulator.vissim_data(obj.vis_obj, obj.maps);
             
             for controller = values(obj.controllers)'
+                controller = controller{1};
                 controller.update_states(obj.intersection_struct_map, obj.vis_data);
             end
 
@@ -160,6 +152,7 @@ classdef vissim < handle
 
             for intersection_id = keys(obj.controllers)'
                 controller = obj.controllers(intersection_id);
+                controller = controller{1};
                 sig = controller.optimize();
                 sigs(intersection_id) = {sig};
             end
@@ -219,6 +212,7 @@ classdef vissim < handle
         make_road_struct_map(obj);
         make_link_input_output_map(obj);
         make_link_queue_map(obj);
+        make_intersection_struct_map(obj);
     end
 
     methods(Static)

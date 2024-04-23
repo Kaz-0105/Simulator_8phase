@@ -138,5 +138,27 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
         obj.MILP_matrices.qeq = [obj.MILP_matrices.qeq; q_tmp];
     end
 
+    % 最低の連続回数について
+
+    for step = 1:obj.N_p-1
+        P_tmp = zeros(1, obj.variables_size);
+        q_tmp = 1;
+
+        for i = 1:step
+            P_tmp(obj.v_num*obj.N_p + (obj.signal_num + 1)*i) = 1;
+        end
+
+        phi_past_data = obj.phi_results.get_past_data();
+        for j = 1: obj.N_s-step
+            q_tmp = q_tmp - phi_past_data(end - j + 1);
+        end
+
+        obj.MILP_matrices.P = [obj.MILP_matrices.P; P_tmp];
+        obj.MILP_matrices.q = [obj.MILP_matrices.q; q_tmp];
+    end
+            
+
+            
+
 
 end

@@ -21,6 +21,7 @@ function make_vehs_data(obj, intersection_struct_map, vis_data)
                 % 自動車が存在する場合
                 obj.pos_vehs.north = vehs_data(:,1); % 1列目は位置のデータなのでpos_vehsに格納
                 obj.route_vehs.north = vehs_data(:,2); % 2列目は進路のデータなのでroute_vehsに格納
+
             else
                 % 自動車が存在しない場合は空の配列とする
                 obj.pos_vehs.north = []; 

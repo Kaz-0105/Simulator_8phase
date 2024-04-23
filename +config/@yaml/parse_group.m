@@ -124,6 +124,9 @@ function group = parse_group(roads_file, intersections_file)
             tmp_intersection.output_road_ids(end + 1) = output_road_id{1};
         end
 
+        % 交差点の制御方法を取得
+        tmp_intersection.control_method = intersection_data.control_method;
+
         group.intersections{end + 1} = tmp_intersection;
         
     end

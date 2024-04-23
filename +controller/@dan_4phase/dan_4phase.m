@@ -17,6 +17,7 @@ classdef dan_4phase < handle
 
         pos_vehs; % 自動車の位置情報をまとめた構造体
         route_vehs; % 自動車の進行方向の情報をまとめた構造体
+        num_vehs; % 自動車の数をまとめた構造体
         first_veh_ids; % 先頭車の情報をまとめた構造体
 
         MLD_matrices; % 混合論理動的システムの係数行列を収納する構造体
@@ -33,7 +34,8 @@ classdef dan_4phase < handle
 
         x_opt; % 最適解
         fval; % 最適解の目的関数の値
-        calc_time; % 計算時間
+        exitflag;
+        calc_time = 0; % 計算時間
 
         u_opt; % 最適解から次の最適化に必要な信号現示の部分
         phi_opt; % 最適解から次の最適化に必要な全体として信号現示が変化したことを示すバイナリphiの部分
@@ -98,11 +100,11 @@ classdef dan_4phase < handle
                 options.ConstraintTolerance = 1e-3;
                 options.RelativeGapTolerance = 1e-3;
                 options.MaxTime = 10;
-                options.Display = 'off';
+                options.Display = 'final';
 
                 tic;
 
-                [obj.x_opt, obj.fval] = intlinprog(f', intcon, P, q, Peq, qeq, lb, ub, options);
+                [obj.x_opt, obj.fval, obj.exitflag] = intlinprog(f', intcon, P, q, Peq, qeq, lb, ub, options);
 
                 obj.calc_time = toc;
                 
@@ -140,13 +142,17 @@ classdef dan_4phase < handle
             
             obj.prediction_count = obj.prediction_count + 1; % 予測回数をカウント
 
-            fprintf('交差点%dの最適化結果:\n', obj.id);
-            disp(sig);
+            %fprintf('交差点%dの最適化結果:\n', obj.id);
+            %disp(sig);
 
         end
 
         function calc_time = get_calc_time(obj)
             calc_time = obj.calc_time;
+        end
+
+        function num_vehs = get_num_vehs(obj)
+            num_vehs = obj.num_vehs;
         end
     end
 

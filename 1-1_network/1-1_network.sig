@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sc version="202001" id="1" name="" frequency="10" steps="0" defaultIntergreenMatrix="0" interstagesUsingMinDurations="true" checkSum="2020996371">
+<sc version="202001" id="1" name="" frequency="10" steps="0" defaultIntergreenMatrix="0" interstagesUsingMinDurations="true" checkSum="4275686344">
   <signaldisplays>
     <display id="1" name="Red" state="RED">
       <patterns>
@@ -55,6 +55,34 @@
         <defaultDuration display="4" duration="3000" />
       </defaultDurations>
     </sg>
+    <sg id="5" name="Signal group 5" defaultSignalSequence="7">
+      <defaultDurations>
+        <defaultDuration display="1" duration="1000" />
+        <defaultDuration display="3" duration="5000" />
+        <defaultDuration display="4" duration="3000" />
+      </defaultDurations>
+    </sg>
+    <sg id="6" name="Signal group 6" defaultSignalSequence="7">
+      <defaultDurations>
+        <defaultDuration display="1" duration="1000" />
+        <defaultDuration display="3" duration="5000" />
+        <defaultDuration display="4" duration="3000" />
+      </defaultDurations>
+    </sg>
+    <sg id="7" name="Signal group 7" defaultSignalSequence="7">
+      <defaultDurations>
+        <defaultDuration display="1" duration="1000" />
+        <defaultDuration display="3" duration="5000" />
+        <defaultDuration display="4" duration="3000" />
+      </defaultDurations>
+    </sg>
+    <sg id="8" name="Signal group 8" defaultSignalSequence="7">
+      <defaultDurations>
+        <defaultDuration display="1" duration="1000" />
+        <defaultDuration display="3" duration="5000" />
+        <defaultDuration display="4" duration="3000" />
+      </defaultDurations>
+    </sg>
   </sgs>
   <intergreenmatrices />
   <progs>
@@ -80,6 +108,24 @@
         </sg>
         <sg sg_id="3" signal_sequence="7">
           <cmds>
+            <cmd display="3" begin="0" />
+            <cmd display="1" begin="16000" />
+          </cmds>
+          <fixedstates>
+            <fixedstate display="4" duration="0" />
+          </fixedstates>
+        </sg>
+        <sg sg_id="4" signal_sequence="7">
+          <cmds>
+            <cmd display="3" begin="16000" />
+            <cmd display="1" begin="24000" />
+          </cmds>
+          <fixedstates>
+            <fixedstate display="4" duration="0" />
+          </fixedstates>
+        </sg>
+        <sg sg_id="5" signal_sequence="7">
+          <cmds>
             <cmd display="3" begin="24000" />
             <cmd display="1" begin="40000" />
           </cmds>
@@ -87,7 +133,25 @@
             <fixedstate display="4" duration="0" />
           </fixedstates>
         </sg>
-        <sg sg_id="4" signal_sequence="7">
+        <sg sg_id="6" signal_sequence="7">
+          <cmds>
+            <cmd display="1" begin="0" />
+            <cmd display="3" begin="40000" />
+          </cmds>
+          <fixedstates>
+            <fixedstate display="4" duration="0" />
+          </fixedstates>
+        </sg>
+        <sg sg_id="7" signal_sequence="7">
+          <cmds>
+            <cmd display="3" begin="24000" />
+            <cmd display="1" begin="40000" />
+          </cmds>
+          <fixedstates>
+            <fixedstate display="4" duration="0" />
+          </fixedstates>
+        </sg>
+        <sg sg_id="8" signal_sequence="7">
           <cmds>
             <cmd display="1" begin="0" />
             <cmd display="3" begin="40000" />

@@ -35,6 +35,7 @@ classdef dan_8phase < handle
 
         x_opt; % 最適解
         fval; % 最適解の目的関数の値
+        exitflag;
         calc_time = 0; % 計算時間
 
         u_opt; % 最適解から次の最適化に必要な信号現示の部分
@@ -104,7 +105,7 @@ classdef dan_8phase < handle
 
                 tic;
 
-                [obj.x_opt, obj.fval] = intlinprog(f', intcon, P, q, Peq, qeq, lb, ub, options);
+                [obj.x_opt, obj.fval, obj.exitflag] = intlinprog(f', intcon, P, q, Peq, qeq, lb, ub, options);
 
                 obj.calc_time = toc;
 
@@ -142,8 +143,8 @@ classdef dan_8phase < handle
             
             obj.prediction_count = obj.prediction_count + 1; % 予測回数をカウント
 
-            fprintf('交差点%dの最適化結果:\n', obj.id);
-            disp(sig);
+            %fprintf('交差点%dの最適化結果:\n', obj.id);
+            %disp(sig);
 
         end
 

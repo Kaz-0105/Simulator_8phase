@@ -33,10 +33,10 @@
 		</areaBehaviorType>
 	</areaBehaviorTypes>
 	<cameraPositions>
-		<cameraPosition extentY="10" fov="45" graphicsMode="3D" name="Camera position 1" no="1" pedNo="0" pitchAngle="12.077739862207979" rollAngle="0" vehNo="0" yawAngle="99.740282517223946">
+		<cameraPosition extentY="10" fov="45" graphicsMode="3D" name="3D position" no="1" pedNo="0" pitchAngle="12.077739862207979" rollAngle="0" vehNo="0" yawAngle="99.740282517223946">
 			<coord x="444.34811254002722" y="-321.86563913250569" z="18.526421585028501"/>
 		</cameraPosition>
-		<cameraPosition extentY="644.96825392865048" fov="45" graphicsMode="2D" name="Camera position 1" no="2" pedNo="0" pitchAngle="0" rollAngle="0" vehNo="0" yawAngle="0">
+		<cameraPosition extentY="644.96825392865048" fov="45" graphicsMode="2D" name="2D position" no="2" pedNo="0" pitchAngle="0" rollAngle="0" vehNo="0" yawAngle="0">
 			<coord x="443.07345027056658" y="-230.02059484761639" z="0"/>
 		</cameraPosition>
 	</cameraPositions>
@@ -485,35 +485,123 @@
 		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="10140" link2="10143" mesoCritGap="3.5" minGapBlockDef="3" no="330" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
 	</conflictAreas>
 	<dataCollectionMeasurements>
-		<dataCollectionMeasurement name="input" no="1">
+		<dataCollectionMeasurement name="" no="1">
 			<dataCollectionPoints>
 				<intObjectRef key="1"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="2">
+			<dataCollectionPoints>
 				<intObjectRef key="2"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="3">
+			<dataCollectionPoints>
 				<intObjectRef key="3"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="4">
+			<dataCollectionPoints>
 				<intObjectRef key="4"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="5">
+			<dataCollectionPoints>
 				<intObjectRef key="5"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="6">
+			<dataCollectionPoints>
 				<intObjectRef key="6"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="7">
+			<dataCollectionPoints>
 				<intObjectRef key="7"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="8">
+			<dataCollectionPoints>
 				<intObjectRef key="8"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="9">
+			<dataCollectionPoints>
 				<intObjectRef key="9"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="10">
+			<dataCollectionPoints>
 				<intObjectRef key="10"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="11">
+			<dataCollectionPoints>
 				<intObjectRef key="11"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="12">
+			<dataCollectionPoints>
 				<intObjectRef key="12"/>
 			</dataCollectionPoints>
 		</dataCollectionMeasurement>
-		<dataCollectionMeasurement name="output" no="2">
+		<dataCollectionMeasurement name="" no="13">
 			<dataCollectionPoints>
 				<intObjectRef key="13"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="14">
+			<dataCollectionPoints>
 				<intObjectRef key="14"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="15">
+			<dataCollectionPoints>
 				<intObjectRef key="15"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="16">
+			<dataCollectionPoints>
 				<intObjectRef key="16"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="17">
+			<dataCollectionPoints>
 				<intObjectRef key="17"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="18">
+			<dataCollectionPoints>
 				<intObjectRef key="18"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="19">
+			<dataCollectionPoints>
 				<intObjectRef key="19"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="20">
+			<dataCollectionPoints>
 				<intObjectRef key="20"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="21">
+			<dataCollectionPoints>
 				<intObjectRef key="21"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="22">
+			<dataCollectionPoints>
 				<intObjectRef key="22"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="23">
+			<dataCollectionPoints>
 				<intObjectRef key="23"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="24">
+			<dataCollectionPoints>
 				<intObjectRef key="24"/>
 			</dataCollectionPoints>
 		</dataCollectionMeasurement>
@@ -2191,7 +2279,7 @@
 		<areaResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 		<dataColl collectData="true" fromTime="0" interval="9" toTime="99999"/>
 		<dataCollRawData fromTime="0" toTime="99999" writeFile="false"/>
-		<delays collectData="false" fromTime="0" interval="9" toTime="99999"/>
+		<delays collectData="true" fromTime="0" interval="9" toTime="900"/>
 		<dischRec fromTime="0" toTime="99999" writeFile="false"/>
 		<greenTimeDistribution fromTime="0" toTime="99999" writeFile="false"/>
 		<linkResults collectData="false" fromTime="0" interval="99999" perLane="false" toTime="99999"/>
@@ -2217,13 +2305,13 @@
 		<pedTravTmODData fromTime="0" interval="99999" toTime="99999" writeFile="false"/>
 		<pedTravTmRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<pedTravTms collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<queues collectData="true" fromTime="0" interval="9" toTime="99999"/>
+		<queues collectData="true" fromTime="0" interval="9" toTime="900"/>
 		<scDetRec writeFile="false"/>
 		<ssam fromTime="0" toTime="99999" writeFile="false"/>
 		<sigChgs writeDatabase="false" writeFile="false"/>
 		<vehInpData writeFile="false"/>
 		<vehInps collectData="true" fromTime="0" interval="99999" toTime="99999"/>
-		<vehNetPerf collectData="true" fromTime="0" interval="9" toTime="99999"/>
+		<vehNetPerf collectData="true" fromTime="0" interval="9" toTime="900"/>
 		<vehRec filterType="ALL" fromTime="0" inclParkVehs="false" resolution="1" toTime="99999" writeDatabase="false" writeFile="false">
 			<attributes>
 				<attributeSelection attributeID="SIMSEC" decimals="2" format="SECONDS" showUnits="false"/>
@@ -8158,16 +8246,16 @@
 		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="" no="71" pos="197.8857398776783" sg="9 7" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
 		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="57 1" localNo="0" name="" no="72" pos="47.393445354801813" sg="9 8" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
 	</signalHeads>
-	<simulation comment="" numCores="1" numRuns="100" randSeed="22" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="900" simRes="10" simSpeed="8" startTm="0" useAllCores="true" useMaxSimSpeed="false" volumeIncrDynAssign="0"/>
+	<simulation comment="" numCores="1" numRuns="1" randSeed="22" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="900" simRes="10" simSpeed="8" startTm="0" useAllCores="true" useMaxSimSpeed="false" volumeIncrDynAssign="0"/>
 	<storyboards>
 		<storyboard filename="#data#2D" framerate="10" name="" netLayout="" no="1" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
 			<keyframes>
-				<keyframe camPos="2" dwellTime="500" name="Camera position 1" netLayout="" startTime="0" transType="SMOOTH"/>
+				<keyframe camPos="2" dwellTime="200" name="2D position" netLayout="" startTime="300" transType="SMOOTH"/>
 			</keyframes>
 		</storyboard>
 		<storyboard filename="#data#3D" framerate="10" name="" netLayout="" no="2" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
 			<keyframes>
-				<keyframe camPos="1" dwellTime="500" name="Camera position 1" netLayout="" startTime="0" transType="SMOOTH"/>
+				<keyframe camPos="1" dwellTime="200" name="3D position" netLayout="" startTime="300" transType="SMOOTH"/>
 			</keyframes>
 		</storyboard>
 	</storyboards>
@@ -8278,79 +8366,79 @@
 	<vehicleInputs>
 		<vehicleInput anmFlag="false" link="1" name="1" no="1">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="16" name="" no="2">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="5" name="" no="3">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="20" name="" no="4">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="9" name="" no="5">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="24" name="" no="6">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="25" name="" no="7">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="40" name="" no="8">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="29" name="" no="9">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="2000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="44" name="" no="10">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="2000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="33" name="" no="11">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="48" name="" no="12">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="0"/>
 			</timeIntVehVols>
 		</vehicleInput>
 	</vehicleInputs>
 	<vehicleRoutingDecisionsStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="25" name="" no="1" pos="0.75723403187829441" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="26" destPos="0.53226622811555702" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="26" destPos="0.53226622811555702" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10036"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="2" destPos="0.30254017276116224" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="2" destPos="0.30254017276116224" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10037"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="13" destPos="0.58706600655532493" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="13" destPos="0.58706600655532493" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10018"/>
 						<intObjectRef key="67"/>
@@ -8361,17 +8449,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="14" name="" no="2" pos="0.63038924544395636" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="13" destPos="0.46196710941387736" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="13" destPos="0.46196710941387736" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10039"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="26" destPos="0.53323763548580783" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="26" destPos="0.53323763548580783" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10040"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="37" destPos="0.60086048897287592" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="37" destPos="0.60086048897287592" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10009"/>
 						<intObjectRef key="58"/>
@@ -8382,17 +8470,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="38" name="" no="3" pos="0.85027144402036858" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="37" destPos="0.56089528949987966" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="37" destPos="0.56089528949987966" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10042"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="13" destPos="0.4250848735535589" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="13" destPos="0.4250848735535589" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10043"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="2" destPos="0.33427123586849267" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="2" destPos="0.33427123586849267" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10027"/>
 						<intObjectRef key="76"/>
@@ -8403,17 +8491,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="1" name="" no="4" pos="0.88953689958799076" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="2" destPos="0.33427123586849267" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="2" destPos="0.33427123586849267" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10045"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="37" destPos="0.66370127798858292" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="37" destPos="0.66370127798858292" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10046"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="26" destPos="0.45545372025024844" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="26" destPos="0.45545372025024844" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10000"/>
 						<intObjectRef key="49"/>
@@ -8424,17 +8512,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="26" name="" no="5" pos="0.7865606005495952" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="27" destPos="0.30789447587899793" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="27" destPos="0.30789447587899793" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10048"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="6" destPos="0.4667634336856476" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="6" destPos="0.4667634336856476" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10049"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="17" destPos="0.54133882698234881" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="17" destPos="0.54133882698234881" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10019"/>
 						<intObjectRef key="68"/>
@@ -8445,17 +8533,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="18" name="" no="6" pos="0.36506444050698067" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="17" destPos="0.75233996153664684" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="17" destPos="0.75233996153664684" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10051"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="27" destPos="0.34037633365417086" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="27" destPos="0.34037633365417086" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10052"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="38" destPos="0.71027140762473717" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="38" destPos="0.71027140762473717" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10012"/>
 						<intObjectRef key="61"/>
@@ -8466,17 +8554,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="39" name="" no="7" pos="0.37659018561831414" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="38" destPos="0.72016315452930024" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="38" destPos="0.72016315452930024" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10054"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="17" destPos="0.55806038645619316" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="17" destPos="0.55806038645619316" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10055"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="6" destPos="0.46595312752305446" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="6" destPos="0.46595312752305446" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10028"/>
 						<intObjectRef key="77"/>
@@ -8487,17 +8575,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="5" name="" no="8" pos="0.43935958666910735" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="6" destPos="0.50069775714284825" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="6" destPos="0.50069775714284825" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10057"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="38" destPos="0.72846961204663918" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="38" destPos="0.72846961204663918" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10058"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="27" destPos="0.35654944064535538" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="27" destPos="0.35654944064535538" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10003"/>
 						<intObjectRef key="52"/>
@@ -8508,17 +8596,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="27" name="" no="9" pos="0.50278562252997849" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="28" destPos="0.6035253375937073" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="28" destPos="0.6035253375937073" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10060"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="10" destPos="0.25643545374570192" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="10" destPos="0.25643545374570192" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10061"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="21" destPos="0.73909345461624931" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="21" destPos="0.73909345461624931" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10020"/>
 						<intObjectRef key="69"/>
@@ -8529,17 +8617,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="22" name="" no="10" pos="0.44678818054830305" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="21" destPos="0.8358709987197579" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="21" destPos="0.8358709987197579" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10063"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="28" destPos="0.58044101232682144" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="28" destPos="0.58044101232682144" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10064"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="39" destPos="0.26186339212649834" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="39" destPos="0.26186339212649834" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10015"/>
 						<intObjectRef key="64"/>
@@ -8550,17 +8638,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="40" name="" no="11" pos="0.49831350255553419" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="39" destPos="0.28273859313002853" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="39" destPos="0.28273859313002853" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10066"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="21" destPos="0.76168654000450831" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="21" destPos="0.76168654000450831" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10067"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="10" destPos="0.27255506771870125" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="10" destPos="0.27255506771870125" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10029"/>
 						<intObjectRef key="78"/>
@@ -8571,17 +8659,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="9" name="" no="12" pos="0.49278230425427139" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="10" destPos="0.28860269800968319" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="10" destPos="0.28860269800968319" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10069"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="39" destPos="0.26183445478403133" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="39" destPos="0.26183445478403133" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10070"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="28" destPos="0.52809812423949165" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="28" destPos="0.52809812423949165" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10006"/>
 						<intObjectRef key="55"/>
@@ -8597,12 +8685,12 @@
 						<intObjectRef key="10072"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="3" destPos="0.2827953751339381" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="3" destPos="0.2827953751339381" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10073"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="14" destPos="0.46129508966982408" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="14" destPos="0.46129508966982408" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10021"/>
 						<intObjectRef key="70"/>
@@ -8613,17 +8701,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="15" name="" no="14" pos="0.70844446189579757" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="14" destPos="0.47802729931311005" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="14" destPos="0.47802729931311005" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10075"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="30" destPos="0.58163674551171318" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="30" destPos="0.58163674551171318" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10076"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="41" destPos="0.85392809812570514" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="41" destPos="0.85392809812570514" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10010"/>
 						<intObjectRef key="59"/>
@@ -8634,17 +8722,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="42" name="" no="15" pos="0.37805858796377306" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="41" destPos="0.8083419337405936" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="41" destPos="0.8083419337405936" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10078"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="14" destPos="0.43764344669348404" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="14" destPos="0.43764344669348404" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10079"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="3" destPos="0.31539452149002423" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="3" destPos="0.31539452149002423" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10030"/>
 						<intObjectRef key="79"/>
@@ -8655,17 +8743,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="2" name="" no="16" pos="0.55660821039765418" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="3" destPos="0.33170609194846029" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="3" destPos="0.33170609194846029" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10081"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="41" destPos="0.95070851224007125" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="41" destPos="0.95070851224007125" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10082"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="30" destPos="0.62106712081788251" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="30" destPos="0.62106712081788251" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10001"/>
 						<intObjectRef key="50"/>
@@ -8697,17 +8785,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="19" name="" no="18" pos="0.37773025169820612" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="18" destPos="0.2870363535831833" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="18" destPos="0.2870363535831833" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10087"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="31" destPos="0.39396404055892253" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="31" destPos="0.39396404055892253" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10088"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="42" destPos="0.21460999131672417" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="42" destPos="0.21460999131672417" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10013"/>
 						<intObjectRef key="62"/>
@@ -8739,17 +8827,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="6" name="" no="20" pos="0.71002682038207354" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="7" destPos="0.7274979071304023" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="7" destPos="0.7274979071304023" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10093"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="42" destPos="0.24808583666459941" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="42" destPos="0.24808583666459941" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10094"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="31" destPos="0.40946788652938587" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="31" destPos="0.40946788652938587" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10004"/>
 						<intObjectRef key="53"/>
@@ -8760,17 +8848,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="31" name="" no="21" pos="0.53506022294586564" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="32" destPos="0.66164009965809567" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="32" destPos="0.66164009965809567" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10096"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="11" destPos="0.42146168108150694" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="11" destPos="0.42146168108150694" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10097"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="22" destPos="0.34256689045147204" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="22" destPos="0.34256689045147204" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10023"/>
 						<intObjectRef key="72"/>
@@ -8781,17 +8869,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="23" name="" no="22" pos="0.59110152899591295" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="22" destPos="0.32961361232744718" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="22" destPos="0.32961361232744718" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10099"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="32" destPos="0.5864611159086297" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="32" destPos="0.5864611159086297" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10100"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="43" destPos="0.42043246161467535" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="43" destPos="0.42043246161467535" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10016"/>
 						<intObjectRef key="65"/>
@@ -8802,17 +8890,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="44" name="" no="23" pos="0.53672159294948463" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="43" destPos="0.44132740027339384" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="43" destPos="0.44132740027339384" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10102"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="22" destPos="0.38169546390306702" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="22" destPos="0.38169546390306702" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10103"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="11" destPos="0.36038238043062021" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="11" destPos="0.36038238043062021" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10032"/>
 						<intObjectRef key="81"/>
@@ -8823,17 +8911,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="10" name="" no="24" pos="0.46735812535308241" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="11" destPos="0.42118906520139471" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="11" destPos="0.42118906520139471" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10105"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="43" destPos="0.45161951598115824" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="43" destPos="0.45161951598115824" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10106"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="32" destPos="0.47496364848471112" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="32" destPos="0.47496364848471112" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10007"/>
 						<intObjectRef key="56"/>
@@ -8844,17 +8932,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="33" name="" no="25" pos="0.50477846189215136" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="34" destPos="0.34253527978381554" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="34" destPos="0.34253527978381554" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10108"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="4" destPos="0.65488615620267954" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="4" destPos="0.65488615620267954" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10109"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="15" destPos="0.62305916588716281" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="15" destPos="0.62305916588716281" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10024"/>
 						<intObjectRef key="73"/>
@@ -8865,17 +8953,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="16" name="" no="26" pos="0.57011010453309818" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="15" destPos="0.58424853231650131" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="15" destPos="0.58424853231650131" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10111"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="34" destPos="0.38257241953280613" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="34" destPos="0.38257241953280613" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10112"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="45" destPos="0.80797312806453103" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="45" destPos="0.80797312806453103" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10011"/>
 						<intObjectRef key="60"/>
@@ -8886,17 +8974,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="46" name="" no="27" pos="0.2794621268995901" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="45" destPos="0.76810416660620617" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="45" destPos="0.76810416660620617" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10114"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="15" destPos="0.62490744944511323" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="15" destPos="0.62490744944511323" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10115"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="4" destPos="0.634998314939067" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="4" destPos="0.634998314939067" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10033"/>
 						<intObjectRef key="82"/>
@@ -8907,17 +8995,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="3" name="" no="28" pos="0.49431791075818771" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="4" destPos="0.70046647333327894" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="4" destPos="0.70046647333327894" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10117"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="45" destPos="0.81869248989296173" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="45" destPos="0.81869248989296173" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10118"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="34" destPos="0.34259179803081169" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="34" destPos="0.34259179803081169" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10002"/>
 						<intObjectRef key="51"/>
@@ -8928,17 +9016,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="34" name="" no="29" pos="0.46482492414969367" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="35" destPos="0.19187240190157751" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="35" destPos="0.19187240190157751" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10120"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="8" destPos="0.49113512561331368" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="8" destPos="0.49113512561331368" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10121"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="19" destPos="0.29963989079655673" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="19" destPos="0.29963989079655673" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10025"/>
 						<intObjectRef key="74"/>
@@ -8949,17 +9037,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="20" name="" no="30" pos="0.21303563367745473" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="19" destPos="0.32566160032246633" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="19" destPos="0.32566160032246633" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10123"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="35" destPos="0.19187240190157751" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="35" destPos="0.19187240190157751" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10124"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="46" destPos="0.24594306668042265" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="46" destPos="0.24594306668042265" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10014"/>
 						<intObjectRef key="63"/>
@@ -8970,17 +9058,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="47" name="" no="31" pos="0.56551810550865733" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="46" destPos="0.21929695168908669" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="46" destPos="0.21929695168908669" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10126"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="19" destPos="0.31265074555951156" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="19" destPos="0.31265074555951156" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10127"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="8" destPos="0.53997139488355606" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="8" destPos="0.53997139488355606" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10034"/>
 						<intObjectRef key="83"/>
@@ -8991,17 +9079,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="7" name="" no="32" pos="0.89667754433273672" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="8" destPos="0.50113265619632485" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="8" destPos="0.50113265619632485" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10129"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="46" destPos="0.21908553520912441" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="46" destPos="0.21908553520912441" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10130"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="35" destPos="0.2243542596767503" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="35" destPos="0.2243542596767503" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10005"/>
 						<intObjectRef key="54"/>
@@ -9012,17 +9100,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="35" name="" no="33" pos="0.32170940380703783" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="36" destPos="0.52786298973548984" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="36" destPos="0.52786298973548984" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10132"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="12" destPos="0.32609914901803877" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="12" destPos="0.32609914901803877" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10133"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="23" destPos="0.44936964783682343" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="23" destPos="0.44936964783682343" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10026"/>
 						<intObjectRef key="75"/>
@@ -9033,17 +9121,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="24" name="" no="34" pos="0.29329737646656634" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="23" destPos="0.49096719969379682" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="23" destPos="0.49096719969379682" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10135"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="36" destPos="0.47463659253882395" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="36" destPos="0.47463659253882395" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10136"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="47" destPos="0.28246146599107452" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="47" destPos="0.28246146599107452" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10017"/>
 						<intObjectRef key="66"/>
@@ -9054,17 +9142,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="48" name="" no="35" pos="0.52490018265167571" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="47" destPos="0.29913027438096701" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="47" destPos="0.29913027438096701" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10138"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="23" destPos="0.47447455982603493" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="23" destPos="0.47447455982603493" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10139"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="12" destPos="0.28460269647343811" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="12" destPos="0.28460269647343811" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10035"/>
 						<intObjectRef key="84"/>
@@ -9075,17 +9163,17 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="11" name="" no="36" pos="0.62442324619753431" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="12" destPos="0.32619491386324967" formula="" name="" no="1" relFlow="">
+				<vehicleRouteStatic destLink="12" destPos="0.32619491386324967" formula="" name="" no="1" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10141"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="47" destPos="0.29072877666247704" formula="" name="" no="2" relFlow="">
+				<vehicleRouteStatic destLink="47" destPos="0.29072877666247704" formula="" name="" no="2" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10142"/>
 					</linkSeq>
 				</vehicleRouteStatic>
-				<vehicleRouteStatic destLink="36" destPos="0.50146197275840609" formula="" name="" no="3" relFlow="">
+				<vehicleRouteStatic destLink="36" destPos="0.50146197275840609" formula="" name="" no="3" relFlow="2 0:0">
 					<linkSeq>
 						<intObjectRef key="10008"/>
 						<intObjectRef key="57"/>

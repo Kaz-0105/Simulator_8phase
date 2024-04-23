@@ -69,28 +69,51 @@ function emergency_treatment(obj)
     [~, phase_id] = max([north_south_straight, north_south_right, east_west_straight, east_west_right, ...
         north_straight_right, south_straight_right, east_straight_right, west_straight_right]);
 
-    obj.u_opt = [];
+
+    u_future_data = obj.u_results.get_future_data();
+    obj.u_opt = u_future_data(:,1);
     if phase_id == 1
         tmp_u = [1; 0; 1; 0; 0; 0; 0; 0];
-        for step = 1: obj.N_p
+        for step = 2: obj.N_p
             obj.u_opt = [obj.u_opt, tmp_u];
         end
     elseif phase_id == 2
         tmp_u = [0; 1; 0; 1; 0; 0; 0; 0];
-        for step = 1: obj.N_p
+        for step = 2: obj.N_p
             obj.u_opt = [obj.u_opt, tmp_u];
         end
     elseif phase_id == 3
         tmp_u = [0; 0; 0; 0; 1; 0; 1; 0];
-        for step = 1: obj.N_p
+        for step = 2: obj.N_p
             obj.u_opt = [obj.u_opt, tmp_u];
         end
     elseif phase_id == 4
         tmp_u = [0; 0; 0; 0; 0; 1; 0; 1];
-        for step = 1: obj.N_p
+        for step = 2: obj.N_p
+            obj.u_opt = [obj.u_opt, tmp_u];
+        end
+    elseif phase_id == 5
+        tmp_u = [1; 1; 0; 0; 0; 0; 0; 0];
+        for step = 2: obj.N_p
+            obj.u_opt = [obj.u_opt, tmp_u];
+        end
+    elseif phase_id == 6
+        tmp_u = [0; 0; 1; 1; 0; 0; 0; 0];
+        for step = 2: obj.N_p
+            obj.u_opt = [obj.u_opt, tmp_u];
+        end
+    elseif phase_id == 7
+        tmp_u = [0; 0; 0; 0; 1; 1; 0; 0];
+        for step = 2: obj.N_p
+            obj.u_opt = [obj.u_opt, tmp_u];
+        end
+    elseif phase_id == 8
+        tmp_u = [0; 0; 0; 0; 0; 0; 1; 1];
+        for step = 2: obj.N_p
             obj.u_opt = [obj.u_opt, tmp_u];
         end
     end
+
 
     obj.phi_opt = zeros(1, obj.N_p-1);
 

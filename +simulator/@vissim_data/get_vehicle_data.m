@@ -38,7 +38,10 @@ function get_vehicle_data(obj, v_obj, maps)
             if ~isempty(vehs_data)
                 vehs_data = sortrows(vehs_data, 1, 'descend');
             end
+
         end
+
+        vehs_data(isnan(vehs_data)) = 1; % NaNを1に変換
         
         obj.road_vehs_map(road_id) = {vehs_data};
 

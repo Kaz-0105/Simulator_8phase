@@ -11,8 +11,6 @@ classdef yaml<handle
         num_loop = 0;               % MPCのサイクルのループ回数
         sim_count = 0;              % シミュレーションする時間
         sim_resolution = 0;         % シミュレーション時間で1sあたりに何回自動車の位置を更新するか(解像度)
-        control_mode = 'off';
-        prediction_model = 'Dan';
         plot_list = {};
         model_prms = [];
         groups = {};
@@ -80,29 +78,6 @@ classdef yaml<handle
             % シミュレーションの回数
             obj.sim_count = data.sim_count;
 
-            % 制御モードの設定
-            try
-                obj.control_mode = data.control_mode;
-            catch 
-                obj.control_mode = 'off';
-            end
-
-            % 予測モデルの設定
-            try 
-                obj.prediction_model = data.prediction_model;
-            catch
-                obj.prediction_model = 'Dan_4phase';
-            end
-
-            if strcmp(obj.prediction_model,'Dan_4phase') || strcmp(obj.prediction_model,'Dan_8phase')
-                prms_data = yaml.loadFile(append(file_dir, 'config_dan.yaml'));
-                obj.model_prms.m = prms_data.m;
-                obj.model_prms.N_s = prms_data.N_s;
-                obj.model_prms.eps = prms_data.eps;
-                obj.model_prms.fix_num = prms_data.fix_num;
-            elseif strcmp(obj.prediction_model,'Newell')
-            end
-
             % 出力するデータに関して
             for plot = data.plot_list
                 plot = plot{1};
@@ -135,6 +110,44 @@ classdef yaml<handle
                 end
 
                 obj.groups{end+1} = config.yaml.parse_group(roads_file, intersections_file);  % 1つのエリアの情報をまとめたgroup構造体をgroupsとしてセル配列にまとめる
+            end
+
+            % 予測モデルのパラメータの設定（修正必要）
+
+            for group = obj.groups
+                group = group{1};
+                for intersection_struct = group.intersections
+                    intersection_struct = intersection_struct{1};
+                    if strcmp(intersection_struct.control_method, "Dan_4phase") || strcmp(intersection_struct.control_method, "Dan_8phase")
+                        prms_data = yaml.loadFile(append(file_dir, 'config_dan.yaml'));
+                        obj.model_prms.m = prms_data.m;
+                        obj.model_prms.N_s = prms_data.N_s;
+                        obj.model_prms.eps = prms_data.eps;
+                        obj.model_prms.fix_num = prms_data.fix_num;
+                    elseif strcmp(intersection_struct.control_method, "Fix")
+                    elseif strcmp(intersection_struct.control_method, "Max_queue")
+                    end
+                end
+
+            end
+        end
+
+        function show_control_method(obj)
+            for group = obj.groups
+                group = group{1};
+                for intersection_struct = group.intersections
+                    intersection_struct = intersection_struct{1};
+                    if strcmp(intersection_struct.control_method, "Dan_4phase")
+                        fprintf('交差点%dの制御方法: MPC(4フェーズ)\n', intersection_struct.id);
+                    elseif strcmp(intersection_struct.control_method, "Dan_8phase")
+                        fprintf('交差点%dの制御方法: MPC(8フェーズ)\n', intersection_struct.id);
+                    elseif strcmp(intersection_struct.control_method, "Fix")
+                        fprintf('交差点%dの制御方法: 固定式\n', intersection_struct.id);
+                    elseif strcmp(intersection_struct.control_method, "Max_queue")
+                        fprintf('交差点%dの制御方法: 最大車列\n', intersection_struct.id);
+                    end
+                    
+                end
             end
         end
     end

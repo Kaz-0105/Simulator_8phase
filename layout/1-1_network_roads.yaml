@@ -1,0 +1,163 @@
+id : 1
+roads : 
+  - id : 1
+    v_ids : [1, 9, 10000]
+    v_mid : 1
+    v_sc : 1
+    v_sgs : 
+      - id : 7
+        dirct : 'straight'
+      - id : 8
+        dirct : 'right'
+    v_rfs : 
+      - id : 2
+        rf : 1
+        dirct : 'straight'
+      - id : 7
+        rf : 1
+        dirct : 'left'
+      - id : 6
+        rf : 1
+        dirct : 'right'
+    speed : 60
+    input : 700
+    desired_speed_ids : [1, 9]
+    sig_head_ids : [7, 8]
+    input_id : 1
+    route_id : 4
+    dcp_id : 1
+    traval_time_ids : [10, 11, 12]
+    queue_counter_ids : [1, 9]
+  
+  - id : 2
+    v_ids : [2]
+    v_mid : 2
+    speed : 60
+    desired_speed_ids : [2]
+    dcp_id : 2
+    queue_counter_ids : [2]
+
+  - id : 3
+    v_ids : [3]
+    v_mid : 3
+    speed : 60
+    desired_speed_ids : [3]
+    dcp_id : 3
+    queue_counter_ids : [3]
+
+  - id : 4
+    v_ids : [4, 10, 10001]
+    v_mid : 4
+    v_sc : 1
+    v_sgs : 
+      - id : 5
+        dirct : 'straight'
+      - id : 6
+        dirct : 'right'
+    v_rfs :
+      - id : 3
+        rf : 1
+        dirct : 'straight'
+      - id : 6
+        rf : 1
+        dirct : 'left'
+      - id : 7
+        rf : 1
+        dirct : 'right'
+    speed : 60
+    input : 700
+    desired_speed_ids : [4, 10]
+    sig_head_ids : [3, 4]
+    input_id : 2
+    route_id : 2
+    dcp_id : 4
+    travel_time_ids : [4, 5, 6]
+    queue_counter_ids : [4, 10]
+
+  - id : 5
+    v_ids : [5, 11, 10002]
+    v_mid : 5
+    v_sc : 1
+    v_sgs : 
+      - id : 1
+        dirct : 'straight'
+      - id : 2
+        dirct : 'right'
+    v_rfs :
+      - id : 6
+        rf : 1
+        dirct : 'straight'
+      - id : 2
+        rf : 1
+        dirct : 'left'
+      - id : 3
+        rf : 1
+        dirct : 'right'
+    speed : 60
+    input : 700
+    desired_speed_ids : [5, 11]
+    sig_head_ids : [1, 2]
+    input_id : 3
+    route_id : 1
+    dcp_id : 5
+    travel_time_ids : [1, 2, 3]
+    queue_counter_ids : [5, 11]
+
+  - id : 6
+    v_ids : [6]
+    v_mid : 6
+    speed : 60
+    desired_speed_ids : [6]
+    dcp_id : 6
+    queue_counter_ids : [6]
+
+  - id : 7
+    v_ids : [7]
+    v_mid : 7
+    speed : 60
+    desired_speed_ids : [7]
+    dcp_id : 7
+    queue_counter_ids : [7]
+
+  - id : 8
+    v_ids : [8, 12, 10003]
+    v_mid : 8
+    v_sc : 1
+    v_sgs : 
+      - id : 3
+        dirct : 'straight'
+      - id : 4
+        dirct : 'right'
+    v_rfs : 
+      - id : 7
+        rf : 1
+        dirct : 'straight'
+      - id : 3
+        rf : 1
+        dirct : 'left'
+      - id : 2
+        rf : 1
+        dirct : 'right'
+    speed : 60
+    input : 700
+    desired_speed_ids : [8, 12]
+    sig_head_ids : [5, 6]
+    input_id : 4
+    route_id : 3
+    dcp_id : 8
+    travel_time_ids : [7, 8, 9]
+    queue_counter_ids : [8, 12]
+
+
+    
+    
+
+    
+
+
+
+
+
+
+
+

@@ -1,7 +1,9 @@
 function update_num_vehs_data(obj, controllers)
     
     for intersection_id = keys(controllers)'
-        num_vehs = controllers(intersection_id).get_num_vehs();
+        controller = controllers(intersection_id);
+        controller = controller{1};
+        num_vehs = controller.get_num_vehs();
 
         if isempty(num_vehs)
             num_vehs_all = 0;
