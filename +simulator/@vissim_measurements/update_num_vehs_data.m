@@ -8,7 +8,17 @@ function update_num_vehs_data(obj, controllers)
         if isempty(num_vehs)
             num_vehs_all = 0;
         else
-            num_vehs_all = sum([num_vehs.north, num_vehs.east, num_vehs.south, num_vehs.west]);
+            if ~isfield(num_vehs, 'north')
+                num_vehs_all = sum([num_vehs.east, num_vehs.south, num_vehs.west]);
+            elseif ~isfield(num_vehs, 'south')
+                num_vehs_all = sum([num_vehs.north, num_vehs.east, num_vehs.west]);
+            elseif ~isfield(num_vehs, 'east')
+                num_vehs_all = sum([num_vehs.north, num_vehs.south, num_vehs.west]);
+            elseif ~isfield(num_vehs, 'west')
+                num_vehs_all = sum([num_vehs.north, num_vehs.east, num_vehs.south]);
+            else
+                num_vehs_all = sum([num_vehs.north, num_vehs.east, num_vehs.south, num_vehs.west]);
+            end
         end
 
         if ~ismember(intersection_id, keys(obj.num_vehs_data_map))

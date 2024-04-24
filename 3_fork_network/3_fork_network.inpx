@@ -32,6 +32,14 @@
 			</areaBehavTypeElements>
 		</areaBehaviorType>
 	</areaBehaviorTypes>
+	<cameraPositions>
+		<cameraPosition extentY="271.24188670846411" fov="45" graphicsMode="2D" name="Camera position 2D" no="1" pedNo="0" pitchAngle="0" rollAngle="0" vehNo="0" yawAngle="0">
+			<coord x="214.43501604758197" y="-103.95946941717864" z="0"/>
+		</cameraPosition>
+		<cameraPosition extentY="10" fov="45" graphicsMode="3D" name="Camera position 3D" no="2" pedNo="0" pitchAngle="30.98534710152515" rollAngle="0" vehNo="0" yawAngle="112.91831180523295">
+			<coord x="300.00308038705316" y="-160.95195217104413" z="95.952018533125397"/>
+		</cameraPosition>
+	</cameraPositions>
 	<colorDistributions>
 		<colorDistribution name="Default" no="1">
 			<colorDistrEl>
@@ -151,9 +159,9 @@
 		</colorDistribution>
 	</colorDistributions>
 	<conflictAreas>
-		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="1" link2="10000" mesoCritGap="3.5" minGapBlockDef="3" no="1" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
-		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="4" link2="10001" mesoCritGap="3.5" minGapBlockDef="3" no="2" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
-		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="6" link2="10002" mesoCritGap="3.5" minGapBlockDef="3" no="3" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
+		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="1" link2="10000" mesoCritGap="3.5" minGapBlockDef="3" no="1" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="UNDETERMINED" visibLink1="100" visibLink2="100"/>
+		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="4" link2="10001" mesoCritGap="3.5" minGapBlockDef="3" no="2" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="UNDETERMINED" visibLink1="100" visibLink2="100"/>
+		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="6" link2="10002" mesoCritGap="3.5" minGapBlockDef="3" no="3" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="UNDETERMINED" visibLink1="100" visibLink2="100"/>
 		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="10004" link2="10005" mesoCritGap="3.5" minGapBlockDef="3" no="4" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
 		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="10004" link2="10006" mesoCritGap="3.5" minGapBlockDef="3" no="5" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
 		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="10006" link2="10007" mesoCritGap="3.5" minGapBlockDef="3" no="6" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
@@ -161,6 +169,46 @@
 		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="10004" link2="10008" mesoCritGap="3.5" minGapBlockDef="3" no="9" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
 		<conflictArea addStopDist="0" anticipRout="0" avoidBlockMajor="true" avoidBlockMinor="1" conflTypDetmAuto="true" conflTypMan="CROSSING" frontGapDef="0.5" link1="10006" link2="10008" mesoCritGap="3.5" minGapBlockDef="3" no="11" obsAdjLns="false" rearGapDef="0.5" safDistFactDef="1.5" status="PASSIVE" visibLink1="100" visibLink2="100"/>
 	</conflictAreas>
+	<dataCollectionMeasurements>
+		<dataCollectionMeasurement name="" no="1">
+			<dataCollectionPoints>
+				<intObjectRef key="1"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="2">
+			<dataCollectionPoints>
+				<intObjectRef key="2"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="3">
+			<dataCollectionPoints>
+				<intObjectRef key="3"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="4">
+			<dataCollectionPoints>
+				<intObjectRef key="4"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="5">
+			<dataCollectionPoints>
+				<intObjectRef key="5"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="" no="6">
+			<dataCollectionPoints>
+				<intObjectRef key="6"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+	</dataCollectionMeasurements>
+	<dataCollectionPoints>
+		<dataCollectionPoint lane="1 1" name="" no="1" pos="0.47877941225522075"/>
+		<dataCollectionPoint lane="2 1" name="" no="2" pos="199.65434035391786"/>
+		<dataCollectionPoint lane="3 1" name="" no="3" pos="199.7769366136647"/>
+		<dataCollectionPoint lane="4 1" name="" no="4" pos="0.60655778605974775"/>
+		<dataCollectionPoint lane="5 1" name="" no="5" pos="199.92480037402049"/>
+		<dataCollectionPoint lane="6 1" name="" no="6" pos="0.49626428183710286"/>
+	</dataCollectionPoints>
 	<desAccelerationFunctions>
 		<desAccelerationFunction name="Car" no="1">
 			<accelFuncDataPts>
@@ -1027,9 +1075,9 @@
 		<areaMeasRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<areaMeasResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 		<areaResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<dataColl collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<dataColl collectData="true" fromTime="0" interval="10" toTime="99999"/>
 		<dataCollRawData fromTime="0" toTime="99999" writeFile="false"/>
-		<delays collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<delays collectData="true" fromTime="0" interval="99999" toTime="99999"/>
 		<dischRec fromTime="0" toTime="99999" writeFile="false"/>
 		<greenTimeDistribution fromTime="0" toTime="99999" writeFile="false"/>
 		<linkResults collectData="false" fromTime="0" interval="99999" perLane="false" toTime="99999"/>
@@ -1055,12 +1103,12 @@
 		<pedTravTmODData fromTime="0" interval="99999" toTime="99999" writeFile="false"/>
 		<pedTravTmRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<pedTravTms collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<queues collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<queues collectData="true" fromTime="0" interval="10" toTime="99999"/>
 		<scDetRec writeFile="false"/>
 		<ssam fromTime="0" toTime="99999" writeFile="false"/>
 		<sigChgs writeDatabase="false" writeFile="false"/>
 		<vehInpData writeFile="false"/>
-		<vehInps collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<vehInps collectData="true" fromTime="0" interval="99999" toTime="99999"/>
 		<vehNetPerf collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 		<vehRec filterType="ALL" fromTime="0" inclParkVehs="false" resolution="1" toTime="99999" writeDatabase="false" writeFile="false">
 			<attributes>
@@ -1073,7 +1121,7 @@
 			</attributes>
 		</vehRec>
 		<vehTravTmRawData fromTime="0" toTime="99999" writeDatabase="false" writeFile="false"/>
-		<vehTravTms aggrBySect="DESTINATION" collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<vehTravTms aggrBySect="DESTINATION" collectData="true" fromTime="0" interval="99999" toTime="99999"/>
 	</evaluation>
 	<levels>
 		<level name="Base" no="1" zCoord="0"/>
@@ -1384,7 +1432,7 @@
 					<linkPolyPoint x="220.39909533708482" y="-4.1237400395924304" zOffset="0"/>
 					<linkPolyPoint x="222.17608769156101" y="-3.0946030923775529" zOffset="0"/>
 					<linkPolyPoint x="224.04729111847487" y="-2.4363056454364354" zOffset="0"/>
-					<linkPolyPoint x="225.98848557479369" y="-2.2037193268424318" zOffset="0"/>
+					<linkPolyPoint x="225.98848557479369" y="-2.2037193268424335" zOffset="0"/>
 				</linkPolyPts>
 			</geometry>
 			<lanes>
@@ -2167,7 +2215,92 @@
 			</distrDataPts>
 		</powerDistribution>
 	</powerDistributions>
+	<queueCounters>
+		<queueCounter link="1" name="" no="1" pos="199.63603253157174"/>
+		<queueCounter link="2" name="" no="2" pos="199.19759468892113"/>
+		<queueCounter link="3" name="" no="3" pos="199.43491935501831"/>
+		<queueCounter link="4" name="" no="4" pos="199.37843539557468"/>
+		<queueCounter link="5" name="" no="5" pos="199.15085518951011"/>
+		<queueCounter link="6" name="" no="6" pos="199.7158602791572"/>
+		<queueCounter link="7" name="" no="7" pos="48.956637619005363"/>
+		<queueCounter link="8" name="" no="8" pos="49.6301305883689"/>
+		<queueCounter link="9" name="" no="9" pos="49.177231922648751"/>
+	</queueCounters>
+	<reducedSpeedAreas>
+		<reducedSpeedArea anmFlag="false" lane="10005 1" length="13.975278045258701" name="" no="1" pos="0.63425674349409455" timeFrom="0" timeTo="99999">
+			<vehClassSpeedRed>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="20" vehClass="10"/>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="20" vehClass="20"/>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="20" vehClass="30"/>
+			</vehClassSpeedRed>
+		</reducedSpeedArea>
+		<reducedSpeedArea anmFlag="false" lane="10007 1" length="12.745347374274729" name="" no="2" pos="1.1325556760698066" timeFrom="0" timeTo="99999">
+			<vehClassSpeedRed>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="20" vehClass="10"/>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="20" vehClass="20"/>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="20" vehClass="30"/>
+			</vehClassSpeedRed>
+		</reducedSpeedArea>
+		<reducedSpeedArea anmFlag="false" lane="10008 1" length="21.885484345318474" name="" no="3" pos="0.86699090751524233" timeFrom="0" timeTo="99999">
+			<vehClassSpeedRed>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="30" vehClass="10"/>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="30" vehClass="20"/>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="30" vehClass="30"/>
+			</vehClassSpeedRed>
+		</reducedSpeedArea>
+		<reducedSpeedArea anmFlag="false" lane="10004 1" length="21.188655386591869" name="" no="4" pos="0.63895744746435068" timeFrom="0" timeTo="99999">
+			<vehClassSpeedRed>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="30" vehClass="10"/>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="30" vehClass="20"/>
+				<vehClassSpeedReduction decel="2" desSpeedDistr="30" vehClass="30"/>
+			</vehClassSpeedRed>
+		</reducedSpeedArea>
+	</reducedSpeedAreas>
+	<signalControllers>
+		<signalController active="true" cycTm="0" cycTmIsVar="false" debug="false" guiFile="#exe#vissig_gui.dll" name="" no="1" offset="0" progFile="#exe#vissig_controller.dll" progNo="1" scDetRecLabelDet="PORTNUMBER" scDetRecLabelSG="NUMBER" scDetRecShortNam="false" sigTmsTabAutoConfig="true" sigTmsTabLabelDet="PORTNUMBER" sigTmsTabLabelSG="NUMBER" supplyFile1="#exe#vissig.config" supplyFile2="#data#3_fork_network1.sig" supplyFile3="" type="FIXEDTIME">
+			<rampMeterPara metEvalInt="60" metRateQDisp="0.25" occupDes="0.25" occupQDispAct="0.5" occupQDispDeact="0.1" regPara="0.019444444444444441"/>
+			<sgs>
+				<signalGroup actuationType="UNDEFINED" amber="3" callDetPortNo="0" chkOutDetPortNo="0" clearTm="0" greenFlsh="0" maxGreen="0" minGreen="5" minRed="1" name="Signal group 1" no="1" redAmber="0" type="NORMAL"/>
+				<signalGroup actuationType="UNDEFINED" amber="3" callDetPortNo="0" chkOutDetPortNo="0" clearTm="0" greenFlsh="0" maxGreen="0" minGreen="5" minRed="1" name="Signal group 2" no="2" redAmber="0" type="NORMAL"/>
+				<signalGroup actuationType="UNDEFINED" amber="3" callDetPortNo="0" chkOutDetPortNo="0" clearTm="0" greenFlsh="0" maxGreen="0" minGreen="5" minRed="1" name="Signal group 3" no="3" redAmber="0" type="NORMAL"/>
+				<signalGroup actuationType="UNDEFINED" amber="3" callDetPortNo="0" chkOutDetPortNo="0" clearTm="0" greenFlsh="0" maxGreen="0" minGreen="5" minRed="1" name="Signal group 4" no="4" redAmber="0" type="NORMAL"/>
+				<signalGroup actuationType="UNDEFINED" amber="3" callDetPortNo="0" chkOutDetPortNo="0" clearTm="0" greenFlsh="0" maxGreen="0" minGreen="5" minRed="1" name="Signal group 5" no="5" redAmber="0" type="NORMAL"/>
+				<signalGroup actuationType="UNDEFINED" amber="3" callDetPortNo="0" chkOutDetPortNo="0" clearTm="0" greenFlsh="0" maxGreen="0" minGreen="5" minRed="1" name="Signal group 6" no="6" redAmber="0" type="NORMAL"/>
+			</sgs>
+			<sigTmsTabConfig>
+				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 1" title="" varNo="1" wttFilename=""/>
+				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 2" title="" varNo="2" wttFilename=""/>
+				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 3" title="" varNo="3" wttFilename=""/>
+				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 4" title="" varNo="4" wttFilename=""/>
+				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 5" title="" varNo="5" wttFilename=""/>
+				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 6" title="" varNo="6" wttFilename=""/>
+			</sigTmsTabConfig>
+			<wttFiles>
+				<intObjectRef key="1"/>
+			</wttFiles>
+		</signalController>
+	</signalControllers>
+	<signalHeads>
+		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="4 1" localNo="0" name="" no="1" pos="199.47415455087037" sg="1 3" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
+		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="8 1" localNo="0" name="" no="2" pos="49.476530114589245" sg="1 4" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
+		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="6 1" localNo="0" name="" no="3" pos="199.35383795910397" sg="1 1" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
+		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="" no="4" pos="49.380064017476286" sg="1 2" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
+		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="1 1" localNo="0" name="" no="5" pos="199.53945236233858" sg="1 5" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
+		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="7 1" localNo="0" name="" no="6" pos="49.543784451336379" sg="1 6" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
+	</signalHeads>
 	<simulation comment="" numCores="1" numRuns="1" randSeed="42" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="3600" simRes="10" simSpeed="10" startTm="0" useAllCores="true" useMaxSimSpeed="true" volumeIncrDynAssign="0"/>
+	<storyboards>
+		<storyboard filename="" framerate="10" name="" netLayout="" no="1" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
+			<keyframes>
+				<keyframe camPos="1" dwellTime="200" name="Camera position 2D" netLayout="" startTime="300" transType="SMOOTH"/>
+			</keyframes>
+		</storyboard>
+		<storyboard filename="" framerate="10" name="" netLayout="" no="2" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
+			<keyframes>
+				<keyframe camPos="2" dwellTime="200" name="Camera position 3D" netLayout="" startTime="300" transType="SMOOTH"/>
+			</keyframes>
+		</storyboard>
+	</storyboards>
 	<timeDistributions>
 		<timeDistribution mean="0.5" name="0.5 s" no="1" stdDev="0" type="NORMAL"/>
 		<timeDistribution mean="0.9" name="0.9 s" no="2" stdDev="0" type="NORMAL"/>
@@ -2272,6 +2405,84 @@
 			</vehCompRelFlows>
 		</vehicleComposition>
 	</vehicleCompositions>
+	<vehicleInputs>
+		<vehicleInput anmFlag="false" link="1" name="" no="1">
+			<timeIntVehVols>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+			</timeIntVehVols>
+		</vehicleInput>
+		<vehicleInput anmFlag="false" link="4" name="" no="2">
+			<timeIntVehVols>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+			</timeIntVehVols>
+		</vehicleInput>
+		<vehicleInput anmFlag="false" link="6" name="" no="3">
+			<timeIntVehVols>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="700"/>
+			</timeIntVehVols>
+		</vehicleInput>
+	</vehicleInputs>
+	<vehicleRoutingDecisionsStatic>
+		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="4" name="" no="1" pos="0.62685954361562546" routeChoiceMeth="STATIC">
+			<vehRoutSta>
+				<vehicleRouteStatic destLink="10005" destPos="0.71043522186828179" formula="" name="" no="1" relFlow=""/>
+				<vehicleRouteStatic destLink="10006" destPos="0.5847396059351867" formula="" name="" no="2" relFlow="">
+					<linkSeq>
+						<intObjectRef key="10001"/>
+						<intObjectRef key="8"/>
+					</linkSeq>
+				</vehicleRouteStatic>
+			</vehRoutSta>
+		</vehicleRoutingDecisionStatic>
+		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="6" name="" no="2" pos="0.12431382519662024" routeChoiceMeth="STATIC">
+			<vehRoutSta>
+				<vehicleRouteStatic destLink="10007" destPos="0.36858391334990326" formula="" name="" no="1" relFlow=""/>
+				<vehicleRouteStatic destLink="10008" destPos="0.33461320913679832" formula="" name="" no="2" relFlow="">
+					<linkSeq>
+						<intObjectRef key="10002"/>
+						<intObjectRef key="9"/>
+					</linkSeq>
+				</vehicleRouteStatic>
+			</vehRoutSta>
+		</vehicleRoutingDecisionStatic>
+		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="1" name="" no="3" pos="0.20429974214491681" routeChoiceMeth="STATIC">
+			<vehRoutSta>
+				<vehicleRouteStatic destLink="10003" destPos="0.31233146776586951" formula="" name="" no="1" relFlow=""/>
+				<vehicleRouteStatic destLink="10004" destPos="0.31918390769786004" formula="" name="" no="2" relFlow="">
+					<linkSeq>
+						<intObjectRef key="10000"/>
+						<intObjectRef key="7"/>
+					</linkSeq>
+				</vehicleRouteStatic>
+			</vehRoutSta>
+		</vehicleRoutingDecisionStatic>
+	</vehicleRoutingDecisionsStatic>
+	<vehicleTravelTimeMeasurements>
+		<vehicleTravelTimeMeasurement name="" no="1">
+			<end link="5" pos="199.54227537209539"/>
+			<start link="4" pos="0.17257126727654692"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="2">
+			<end link="3" pos="199.62172399005138"/>
+			<start link="4" pos="0.73790265746701234"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="3">
+			<end link="3" pos="199.62172399005138"/>
+			<start link="6" pos="0.16269003182851616"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="4">
+			<end link="2" pos="199.01042460019022"/>
+			<start link="6" pos="0.47450970355152072"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="5">
+			<end link="2" pos="198.69760840317798"/>
+			<start link="1" pos="0.12179574358836255"/>
+		</vehicleTravelTimeMeasurement>
+		<vehicleTravelTimeMeasurement name="" no="6">
+			<end link="5" pos="199.00251821091175"/>
+			<start link="1" pos="0.43461194060060554"/>
+		</vehicleTravelTimeMeasurement>
+	</vehicleTravelTimeMeasurements>
 	<vehicleTypes>
 		<vehicleType alightTm="0" anmFlag="false" boardTm="0" capExact="false" capacity="0" category="CAR" clearTmPT="0" colorDistr1="1" desAccelFunc="1" desDecelFunc="1" distCoeffPerMeter="0" doorClosDur="2" dwellTmIsAdd="true" equip="" extDriver="false" extDriverDLLFile="" extDriverParFile="" extEmissionDLLFile="" linkCostCoeff="1" maxAccelFunc="1" maxDecelFunc="1" model2D3DDistr="10" name="Car" no="100" occupDistr="1" travTmCoeff="1">
 			<parkLotSelPars>
@@ -2338,6 +2549,9 @@
 			</parkLotSelPars>
 		</vehicleType>
 	</vehicleTypes>
+	<wttFiles>
+		<wttFile file="#exe#vissig.wtt" no="1"/>
+	</wttFiles>
 	<walkingBehaviors>
 		<walkingBehavior aSocIso="2.72" aSocMean="0.4" bSocIso="0.2" bSocMean="2.8" lambda="0.176" name="Default" no="1" noise="1.2" reactToN="8" sidePref="NONE" tau="0.4" vd="3"/>
 		<walkingBehavior aSocIso="2.72" aSocMean="0.4" bSocIso="0.2" bSocMean="2.8" lambda="0.176" name="Elevator (In Cab)" no="2" noise="0.3" reactToN="8" sidePref="NONE" tau="0.4" vd="3"/>

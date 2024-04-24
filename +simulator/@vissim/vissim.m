@@ -15,6 +15,7 @@ classdef vissim < handle
         vis_data;                           % vissim_dataクラスの変数
         break_time = 0;                     % シミュレーションのブレイクポイントの時間
         vis_controllers;                    % キー：交差点のID、バリュー：交差点の信号を制御するCOMのオブジェクト
+        num_sig_group_list;                 % 各交差点のSignal Groupの数をまとめたリスト
     end
 
     methods(Access = public)
@@ -102,6 +103,8 @@ classdef vissim < handle
                         obj.controllers(intersection_struct.id) = {controller.dan_4phase(intersection_struct.id, config, obj.maps)};
                     case "Dan_8phase"
                         obj.controllers(intersection_struct.id) = {controller.dan_8phase(intersection_struct.id, config, obj.maps)};
+                    case "Dan_3fork"
+                        obj.controllers(intersection_struct.id) = {controller.dan_3fork(intersection_struct.id, config, obj.maps)};
                     case "Fix"
                         obj.controllers(intersection_struct.id) = {controller.fix(intersection_struct.id, config, obj.maps)};
                     case "Max_queue"
@@ -123,6 +126,9 @@ classdef vissim < handle
                     obj.vis_controllers(intersection.id) = {obj.vis_obj.Net.SignalControllers.ItemByKey(intersection.id)};
                 end
             end
+
+            % num_sig_group_listの作成
+            obj.num_sig_group_list = zeros(1, length(obj.vis_controllers));
         end
 
         function v_obj = get_vissim_obj(obj)
@@ -167,9 +173,20 @@ classdef vissim < handle
 
                 for intersection_id = keys(obj.vis_controllers)'
                     vis_controller = obj.vis_controllers(intersection_id);
+                    controller = obj.controllers(intersection_id);
+
                     vis_controller = vis_controller{1};
-    
-                    for signal_group_id = 1:8
+                    controller = controller{1};
+
+                    if strcmp(string(class(controller)), "controller.dan_4phase")
+                        obj.num_sig_group_list(intersection_id) = 8; 
+                    elseif strcmp(string(class(controller)), "controller.dan_8phase")
+                        obj.num_sig_group_list(intersection_id) = 8;
+                    elseif strcmp(string(class(controller)), "controller.dan_3fork")
+                        obj.num_sig_group_list(intersection_id) = 6;
+                    end
+
+                    for signal_group_id = 1: obj.num_sig_group_list(intersection_id)
                         vis_controller.SGs.ItemByKey(signal_group_id).set('AttValue','State',1);
                     end
         
@@ -189,7 +206,7 @@ classdef vissim < handle
                         sig = sigs(intersection_id);
                         sig = sig{1};
 
-                        for signal_group_id = 1:8
+                        for signal_group_id = 1: obj.num_sig_group_list(intersection_id)
                             if sig(signal_group_id, step) == 0
                                 vis_controller.SGs.ItemByKey(signal_group_id).set('AttValue','State',1);
                             else

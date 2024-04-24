@@ -1,0 +1,7 @@
+id : 1
+intersections : 
+  - id : 1
+    irids : [1, 4, 6]
+    ir_directions : ["west", "east", "south"]
+    orids : [2, 3, 5]
+    control_method : "Dan_3fork"

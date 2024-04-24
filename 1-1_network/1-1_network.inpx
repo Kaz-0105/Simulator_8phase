@@ -32,6 +32,14 @@
 			</areaBehavTypeElements>
 		</areaBehaviorType>
 	</areaBehaviorTypes>
+	<cameraPositions>
+		<cameraPosition extentY="330.22655938192963" fov="45" graphicsMode="2D" name="Camera position 2D" no="1" pedNo="0" pitchAngle="0" rollAngle="0" vehNo="0" yawAngle="0">
+			<coord x="234.89218724652795" y="-22.370203266451824" z="0"/>
+		</cameraPosition>
+		<cameraPosition extentY="10" fov="45" graphicsMode="3D" name="Camera position 3D" no="2" pedNo="0" pitchAngle="25.828726945347732" rollAngle="0" vehNo="0" yawAngle="118.07493196141047">
+			<coord x="285.12042137858725" y="-120.53408933447052" z="64.076167980262795"/>
+		</cameraPosition>
+	</cameraPositions>
 	<colorDistributions>
 		<colorDistribution name="Default" no="1">
 			<colorDistrEl>
@@ -2572,6 +2580,18 @@
 		<signalHead allPedTypes="true" allVehTypes="true" anmFlag="false" complRate="1" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="" no="8" pos="49.982109786308456" sg="1 8" slowDownDist="3" type="CIRCULAR" vAmberBlock="0"/>
 	</signalHeads>
 	<simulation comment="" numCores="1" numRuns="1" randSeed="22" randSeedIncr="1" retroSync="false" simMode="MICRO" simPeriod="900" simRes="10" simSpeed="10" startTm="0" useAllCores="true" useMaxSimSpeed="false" volumeIncrDynAssign="0"/>
+	<storyboards>
+		<storyboard filename="" framerate="10" name="" netLayout="" no="1" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
+			<keyframes>
+				<keyframe camPos="1" dwellTime="200" name="Camera position 2D" netLayout="" startTime="300" transType="SMOOTH"/>
+			</keyframes>
+		</storyboard>
+		<storyboard filename="" framerate="10" name="" netLayout="" no="2" prevZoomFact="1" recAVI="true" recScope="EVERYRUN" resX="1920" resY="1080" resolution="1920X1080" showPrev="true">
+			<keyframes>
+				<keyframe camPos="2" dwellTime="200" name="Camera position 3D" netLayout="" startTime="300" transType="SMOOTH"/>
+			</keyframes>
+		</storyboard>
+	</storyboards>
 	<timeDistributions>
 		<timeDistribution mean="0.5" name="0.5 s" no="1" stdDev="0" type="NORMAL"/>
 		<timeDistribution mean="0.9" name="0.9 s" no="2" stdDev="0" type="NORMAL"/>

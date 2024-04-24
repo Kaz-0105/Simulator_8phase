@@ -118,7 +118,7 @@ classdef yaml<handle
                 group = group{1};
                 for intersection_struct = group.intersections
                     intersection_struct = intersection_struct{1};
-                    if strcmp(intersection_struct.control_method, "Dan_4phase") || strcmp(intersection_struct.control_method, "Dan_8phase")
+                    if strcmp(intersection_struct.control_method, "Dan_4phase") || strcmp(intersection_struct.control_method, "Dan_8phase") || strcmp(intersection_struct.control_method, "Dan_3fork")
                         prms_data = yaml.loadFile(append(file_dir, 'config_dan.yaml'));
                         obj.model_prms.m = prms_data.m;
                         obj.model_prms.N_s = prms_data.N_s;
@@ -145,6 +145,8 @@ classdef yaml<handle
                         fprintf('交差点%dの制御方法: 固定式\n', intersection_struct.id);
                     elseif strcmp(intersection_struct.control_method, "Max_queue")
                         fprintf('交差点%dの制御方法: 最大車列\n', intersection_struct.id);
+                    elseif strcmp(intersection_struct.control_method, "Dan_3fork")
+                        fprintf('交差点%dの制御方法: MPC(三叉路)\n', intersection_struct.id);
                     end
                     
                 end

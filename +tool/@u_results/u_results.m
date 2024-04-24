@@ -5,16 +5,16 @@ classdef u_results < handle
         N_s;
         past_data;
         future_data;
-        phase_num;
+        signal_num;
     end
 
     methods(Access = public)
-        function obj = u_results(phase_num, N_p, N_c)
+        function obj = u_results(signal_num, N_p, N_c)
             obj.N_p = N_p;
             obj.N_c = N_c;
-            obj.phase_num = phase_num;
-            obj.past_data = zeros(phase_num, N_c);
-            obj.future_data = zeros(phase_num, N_p - N_c);
+            obj.signal_num = signal_num;
+            obj.past_data = zeros(signal_num, N_c);
+            obj.future_data = zeros(signal_num, N_p - N_c);
             
 
         end

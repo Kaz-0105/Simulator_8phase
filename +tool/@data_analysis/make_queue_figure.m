@@ -5,10 +5,18 @@ function make_queue_figure(obj)
 
     for intersection_id = keys(queue_data_map)'
         queue_data = queue_data_map(intersection_id);
-        queue_data.north = [0, queue_data.north];
-        queue_data.south = [0, queue_data.south];
-        queue_data.east = [0, queue_data.east];
-        queue_data.west = [0, queue_data.west];
+        if isfield(queue_data, 'north')
+            queue_data.north = [0, queue_data.north];
+        end
+        if isfield(queue_data, 'south')
+            queue_data.south = [0, queue_data.south];
+        end
+        if isfield(queue_data, 'east')
+            queue_data.east = [0, queue_data.east];
+        end
+        if isfield(queue_data, 'west')
+            queue_data.west = [0, queue_data.west];
+        end
         queue_data_map(intersection_id) = queue_data;
     end
 
@@ -16,7 +24,17 @@ function make_queue_figure(obj)
     
     for intersection_id = keys(queue_data_map)'
         queue_data = queue_data_map(intersection_id);
-        queue_data.average = mean([queue_data.north; queue_data.south; queue_data.east; queue_data.west], 1);
+        if ~isfield(queue_data, 'north')
+            queue_data.average = mean([queue_data.south; queue_data.east; queue_data.west], 1);
+        elseif ~isfield(queue_data, 'south')
+            queue_data.average = mean([queue_data.north; queue_data.east; queue_data.west], 1);
+        elseif ~isfield(queue_data, 'east')
+            queue_data.average = mean([queue_data.north; queue_data.south; queue_data.west], 1);
+        elseif ~isfield(queue_data, 'west')
+            queue_data.average = mean([queue_data.north; queue_data.south; queue_data.east], 1);
+        else
+            queue_data.average = mean([queue_data.north; queue_data.south; queue_data.east; queue_data.west], 1);
+        end
         queue_data_map(intersection_id) = queue_data;
     end
 

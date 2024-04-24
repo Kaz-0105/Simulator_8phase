@@ -32,6 +32,11 @@
 			</areaBehavTypeElements>
 		</areaBehaviorType>
 	</areaBehaviorTypes>
+	<cameraPositions>
+		<cameraPosition extentY="330.22655938192963" fov="45" graphicsMode="2D" name="Camera position 2D" no="1" pedNo="0" pitchAngle="0" rollAngle="0" vehNo="0" yawAngle="0">
+			<coord x="234.89218724652795" y="-22.370203266451824" z="0"/>
+		</cameraPosition>
+	</cameraPositions>
 	<colorDistributions>
 		<colorDistribution name="Default" no="1">
 			<colorDistrEl>
@@ -2679,7 +2684,7 @@
 	<vehicleInputs>
 		<vehicleInput anmFlag="false" link="1" name="" no="1">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="800"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="900"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="4" name="" no="2">
@@ -2689,7 +2694,7 @@
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="5" name="" no="3">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="800"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="900"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="8" name="" no="4">
