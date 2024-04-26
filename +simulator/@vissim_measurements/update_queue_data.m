@@ -21,24 +21,24 @@ function update_queue_data(obj, maps)
             end
 
             if ~ismember(intersection_struct.id, keys(obj.queue_data_map))
-                if input_road_direction == "north"
+                if strcmp(input_road_direction, "north")
                     tmp_queue_struct.north = [tmp_queue_length];
-                elseif input_road_direction == "south"
+                elseif strcmp(input_road_direction, "south")
                     tmp_queue_struct.south = [tmp_queue_length];
-                elseif input_road_direction == "east"
+                elseif strcmp(input_road_direction, "east")
                     tmp_queue_struct.east = [tmp_queue_length];
-                elseif input_road_direction == "west"
+                elseif strcmp(input_road_direction, "west")
                     tmp_queue_struct.west = [tmp_queue_length];
                 end
 
             else
-                if input_road_direction == "north"
+                if strcmp(input_road_direction, "north")
                     tmp_queue_struct.north = [obj.queue_data_map(intersection_struct.id).north, tmp_queue_length];
-                elseif input_road_direction == "south"
+                elseif strcmp(input_road_direction, "south")
                     tmp_queue_struct.south = [obj.queue_data_map(intersection_struct.id).south, tmp_queue_length];
-                elseif input_road_direction == "east"
+                elseif strcmp(input_road_direction, "east")
                     tmp_queue_struct.east = [obj.queue_data_map(intersection_struct.id).east, tmp_queue_length];
-                elseif input_road_direction == "west"
+                elseif strcmp(input_road_direction, "west")
                     tmp_queue_struct.west = [obj.queue_data_map(intersection_struct.id).west, tmp_queue_length];
                 end
             end
