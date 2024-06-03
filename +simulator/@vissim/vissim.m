@@ -112,7 +112,7 @@ classdef vissim < handle
                 end    
             end
 
-            % vissimA_measurementsクラスの変数の設定
+            % vissim_measurementsクラスの変数の設定
             obj.measurements = simulator.vissim_measurements(obj.vis_obj);
 
             % 制御器のCOMオブジェクトの設定

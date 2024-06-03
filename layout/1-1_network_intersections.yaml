@@ -4,4 +4,4 @@ intersections :
     irids : [1, 4, 5, 8]
     ir_directions : ["west", "east", "north", "south"]
     orids : [2, 3, 6, 7]
-    control_method : "Dan_4phase"
+    control_method : "Dan_8phase"
