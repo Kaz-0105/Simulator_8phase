@@ -1,5 +1,5 @@
-inpx_file : '1-1_network\1-1_network.inpx'   # vissimのinpxファイル
-layx_file : '1-1_network\1-1_network.layx'   # vissimのlayxファイル
+inpx_file : '3_fork_network\3_fork_network.inpx'   # vissimのinpxファイル
+layx_file : '3_fork_network\3_fork_network.layx'   # vissimのlayxファイル
 graphic_mode : 0                             # 描画モードON=0
 seed : 22                                    # 乱数のシード値
 predictive_horizon : 4                       # 予測ホライゾン
@@ -9,7 +9,7 @@ num_loop : 150                                 # MPCのサイクルのループ�
 sim_count : 1                                # シミュレーション回数
 sim_resolution : 10                          # シミュレーション時間で1sあたりに何回自動車の位置を更新するか(解像度)
 groups : 
-  - ["1-1_network_roads.yaml", "1-1_network_intersections.yaml"]                      # 交差点の情報がまとまったyamlファイル
+  - ["3_fork_network_roads.yaml", "3_fork_network_intersections.yaml"]                      # 交差点の情報がまとまったyamlファイル
 
 plot_list :
   - data : "calc_time"
