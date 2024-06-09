@@ -24,6 +24,7 @@ function make_constraints_matrix(obj, MLD_matrices, pos_vehs)
 
     % 交差点内の全ての自動車の位置情報をまとめる
     pos_vehs_all = [pos_vehs.north; pos_vehs.south; pos_vehs.east; pos_vehs.west];
+    obj.pos_vehs_all = pos_vehs_all;
 
     % ここから具体的な計算
     A_bar = kron(ones(obj.N_p, 1), A); % A_barの計算

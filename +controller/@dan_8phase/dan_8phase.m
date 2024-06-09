@@ -29,6 +29,9 @@ classdef dan_8phase < handle
         z_length;           % zの決定変数の数
         delta_length;       % deltaの決定変数の数
 
+        pos_results;
+        pos_vehs_all;
+
         v_num; % MLDの決定変数の長さ
         variables_size; % 決定変数の数
         prediction_count = 0; % 予測回数
@@ -114,6 +117,7 @@ classdef dan_8phase < handle
                     % 最適解から次の最適化に必要な決定変数を抽出
                     obj.make_u_opt();
                     obj.make_phi_opt();
+                    obj.make_pos_results();
                 else
                     % 実行可能解が見つからなかったとき
                     % 自動車台数が多いところを出す
