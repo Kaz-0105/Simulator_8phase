@@ -2722,7 +2722,7 @@
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="5" name="" no="1" pos="0.01" routeChoiceMeth="STATIC">
 			<vehRoutSta>
 				<vehicleRouteStatic destLink="10004" destPos="0.51714244872581205" formula="" name="" no="1" relFlow=""/>
-				<vehicleRouteStatic destLink="10005" destPos="0.63662587057797482" formula="" name="" no="2" relFlow=""/>
+				<vehicleRouteStatic destLink="10005" destPos="0.63662587057797482" formula="" name="" no="2" relFlow="2 0:0"/>
 				<vehicleRouteStatic destLink="10006" destPos="0.51742086166105905" formula="" name="" no="3" relFlow="">
 					<linkSeq>
 						<intObjectRef key="10002"/>
@@ -2733,7 +2733,7 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="4" name="" no="2" pos="0.01" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="10007" destPos="0.51154562725063446" formula="" name="" no="1" relFlow=""/>
+				<vehicleRouteStatic destLink="10007" destPos="0.51154562725063446" formula="" name="" no="1" relFlow="2 0:0"/>
 				<vehicleRouteStatic destLink="10008" destPos="0.61546231125571516" formula="" name="" no="2" relFlow=""/>
 				<vehicleRouteStatic destLink="10009" destPos="0.35395892847190263" formula="" name="" no="3" relFlow="">
 					<linkSeq>
@@ -2746,7 +2746,7 @@
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="8" name="" no="3" pos="0.01" routeChoiceMeth="STATIC">
 			<vehRoutSta>
 				<vehicleRouteStatic destLink="10010" destPos="0.63744666153408802" formula="" name="" no="1" relFlow=""/>
-				<vehicleRouteStatic destLink="10011" destPos="0.82161628042964097" formula="" name="" no="2" relFlow=""/>
+				<vehicleRouteStatic destLink="10011" destPos="0.82161628042964097" formula="" name="" no="2" relFlow="2 0:0"/>
 				<vehicleRouteStatic destLink="10012" destPos="0.58156408193968878" formula="" name="" no="3" relFlow="">
 					<linkSeq>
 						<intObjectRef key="10003"/>
@@ -2757,7 +2757,7 @@
 		</vehicleRoutingDecisionStatic>
 		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="1" name="" no="4" pos="0.01" routeChoiceMeth="STATIC">
 			<vehRoutSta>
-				<vehicleRouteStatic destLink="10013" destPos="0.36189048345337077" formula="" name="" no="1" relFlow=""/>
+				<vehicleRouteStatic destLink="10013" destPos="0.36189048345337077" formula="" name="" no="1" relFlow="2 0:0"/>
 				<vehicleRouteStatic destLink="10014" destPos="0.37584447987297864" formula="" name="" no="2" relFlow=""/>
 				<vehicleRouteStatic destLink="10015" destPos="0.42188762144913572" formula="" name="" no="3" relFlow="">
 					<linkSeq>

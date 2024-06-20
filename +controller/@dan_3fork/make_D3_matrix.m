@@ -22,8 +22,8 @@ function make_D3_matrix(obj, pos_vehs, first_veh_ids, road_prms)
     epsilon = obj.eps; % 微小量
 
     % 自動車の位置を評価
-    p_min = pos_vehs(end)-10;
-    p_max = pos_vehs(1) + v*dt*N_p+10;
+    p_min = pos_vehs(end);
+    p_max = pos_vehs(1) + v*dt*N_p;
 
     % hiの評価
     h1_min = p_s-p_max-D_s;
